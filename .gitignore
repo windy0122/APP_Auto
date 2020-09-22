@@ -2,6 +2,5 @@
 *.iml
 target/
 *.log
-tmlog.lck
-tmlog56.log
-
+test_report.html
+__pycache__

@@ -367,9 +367,9 @@ function showOutput(id, name) {
         <div class="card-body my-2">
         <table class="table my-0">
             <tbody>
-            <tr><td>Start Time:</td><td class="text-right">2020-09-21 17:52:32</td></tr>
-<tr><td>Duration:</td><td class="text-right">0:00:41.667879</td></tr>
-<tr><td>Status:</td><td class="text-right">Passed:34</td></tr>
+            <tr><td>Start Time:</td><td class="text-right">2020-09-22 17:29:26</td></tr>
+<tr><td>Duration:</td><td class="text-right">0:00:14.485517</td></tr>
+<tr><td>Status:</td><td class="text-right">Errors:34</td></tr>
 
             <tr><td>Description:</td><td class="text-right">自动化测试报告：吴迪</td></tr>
             </tbody>
@@ -380,11 +380,11 @@ function showOutput(id, name) {
 
 <div style="float:left; margin-left: 10px; margin-top: 20px;">
     <p> Test Case Pie charts </p>
-    <h2 class="d-flex align-items-center mb-0 font-weight-light pass-color">34</h2>
+    <h2 class="d-flex align-items-center mb-0 font-weight-light pass-color">0</h2>
     <a>PASSED</a><br>
     <h2 class="d-flex align-items-center mb-0 font-weight-light fail-color">0</h2>
     <a>FAILED</a>
-    <h2 class="d-flex align-items-center mb-0 font-weight-light error-color">0</h2>
+    <h2 class="d-flex align-items-center mb-0 font-weight-light error-color">34</h2>
     <a>ERRORS</a><br>
     <h2 class="d-flex align-items-center mb-0 font-weight-light skip-color">0</h2>
     <a>SKIPED</a><br>
@@ -417,32 +417,44 @@ function showOutput(id, name) {
     </tr>
 </thead>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>test_case.test_01_receipt.TestHttpRequest</td>
     <td>10</td>
+    <td>0</td>
+    <td>0</td>
     <td>10</td>
-    <td>0</td>
-    <td>0</td>
     <td><a href="javascript:showClassDetail('c1.1',10)">Detail</a></td>
     <td>&nbsp;</td>
 </tr>
 
-<tr id='pt1.1.1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_receipt_01</div></td>
+<tr id='et1.1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_receipt_01</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.1')" >
-        pass</a>
-    <div id='div_pt1.1.1' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.1')" >
+        error</a>
+    <div id='div_et1.1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1.1: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.1.1: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-a91726298d5ed46481435451f6da52af', 'responseTime': '2020-09-21 17:52:32', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 28, in test_receipt
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 39, in test_receipt
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -452,22 +464,34 @@ pt1.1.1: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.1.2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_receipt_02</div></td>
+<tr id='et1.1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_receipt_02</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.2')" >
-        pass</a>
-    <div id='div_pt1.1.2' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.2')" >
+        error</a>
+    <div id='div_et1.1.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.1.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1.2: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.1.2: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-366fe82dd654de855cf8a72603b1e40c', 'responseTime': '2020-09-21 17:52:32', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 28, in test_receipt
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 39, in test_receipt
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -477,22 +501,34 @@ pt1.1.2: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.1.3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_receipt_03</div></td>
+<tr id='et1.1.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_receipt_03</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.3')" >
-        pass</a>
-    <div id='div_pt1.1.3' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.3')" >
+        error</a>
+    <div id='div_et1.1.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.1.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1.3: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.1.3: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-0291f0ca92316e02bfecdbfa1959f8d2', 'responseTime': '2020-09-21 17:52:33', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 28, in test_receipt
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 39, in test_receipt
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -502,22 +538,34 @@ pt1.1.3: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.1.4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_receipt_04</div></td>
+<tr id='et1.1.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_receipt_04</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.4')" >
-        pass</a>
-    <div id='div_pt1.1.4' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.4')" >
+        error</a>
+    <div id='div_et1.1.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.1.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1.4: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.1.4: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-ca38c554bdb554f6b02bae2a627f39ec', 'responseTime': '2020-09-21 17:52:34', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 28, in test_receipt
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 39, in test_receipt
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -527,22 +575,34 @@ pt1.1.4: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.1.5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_receipt_05</div></td>
+<tr id='et1.1.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_receipt_05</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.5')" >
-        pass</a>
-    <div id='div_pt1.1.5' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.5')" >
+        error</a>
+    <div id='div_et1.1.5' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.5').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.1.5').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1.5: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.1.5: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-013220880eb1c789ab00e6e5b46e0373', 'responseTime': '2020-09-21 17:52:34', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 28, in test_receipt
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 39, in test_receipt
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -552,22 +612,34 @@ pt1.1.5: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.1.6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_receipt_06</div></td>
+<tr id='et1.1.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_receipt_06</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.6')" >
-        pass</a>
-    <div id='div_pt1.1.6' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.6')" >
+        error</a>
+    <div id='div_et1.1.6' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.6').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.1.6').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1.6: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.1.6: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-8f747a8a0413fbecbd596a61d2d02dbf', 'responseTime': '2020-09-21 17:52:35', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 28, in test_receipt
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 39, in test_receipt
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -577,22 +649,34 @@ pt1.1.6: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.1.7' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_receipt_07</div></td>
+<tr id='et1.1.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_receipt_07</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.7')" >
-        pass</a>
-    <div id='div_pt1.1.7' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.7')" >
+        error</a>
+    <div id='div_et1.1.7' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.7').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.1.7').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1.7: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.1.7: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-3adfb1e1e29a5592530e411ba3b15f1b', 'responseTime': '2020-09-21 17:52:39', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 28, in test_receipt
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 39, in test_receipt
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -602,22 +686,34 @@ pt1.1.7: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.1.8' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_receipt_08</div></td>
+<tr id='et1.1.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_receipt_08</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.8')" >
-        pass</a>
-    <div id='div_pt1.1.8' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.8')" >
+        error</a>
+    <div id='div_et1.1.8' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.8').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.1.8').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1.8: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.1.8: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-b691c6568d1ffa9e6bbcff1cf41aa749', 'responseTime': '2020-09-21 17:52:43', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 28, in test_receipt
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 39, in test_receipt
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -627,22 +723,34 @@ pt1.1.8: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.1.9' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_receipt_09</div></td>
+<tr id='et1.1.9' class='none'>
+    <td class='errorCase'><div class='testcase'>test_receipt_09</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.9')" >
-        pass</a>
-    <div id='div_pt1.1.9' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.9')" >
+        error</a>
+    <div id='div_et1.1.9' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.9').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.1.9').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1.9: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.1.9: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-a845692ebda75cad9c358793842b5961', 'responseTime': '2020-09-21 17:52:44', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 28, in test_receipt
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 39, in test_receipt
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -652,22 +760,34 @@ pt1.1.9: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.1.10' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_receipt_10</div></td>
+<tr id='et1.1.10' class='none'>
+    <td class='errorCase'><div class='testcase'>test_receipt_10</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.10')" >
-        pass</a>
-    <div id='div_pt1.1.10' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.10')" >
+        error</a>
+    <div id='div_et1.1.10' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.10').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.1.10').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1.10: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.1.10: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-7564e12f8ee4caae51ac96883512a773', 'responseTime': '2020-09-21 17:52:48', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 28, in test_receipt
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_01_receipt.py", line 39, in test_receipt
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -677,32 +797,44 @@ pt1.1.10: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages
     <td></td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>test_case.test_02_customer.TestHttpRequest</td>
     <td>8</td>
+    <td>0</td>
+    <td>0</td>
     <td>8</td>
-    <td>0</td>
-    <td>0</td>
     <td><a href="javascript:showClassDetail('c1.2',8)">Detail</a></td>
     <td>&nbsp;</td>
 </tr>
 
-<tr id='pt1.2.1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_customer_1</div></td>
+<tr id='et1.2.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_customer_1</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.1')" >
-        pass</a>
-    <div id='div_pt1.2.1' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.2.1')" >
+        error</a>
+    <div id='div_et1.2.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.2.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2.1: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.2.1: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-3c70ae57a0c998344bc46f335e65b4fe', 'responseTime': '2020-09-21 17:52:48', 'ret': '0', 'success': '0', 'val': {'id': '505478657466036224'}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 46, in test_customer
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -712,22 +844,34 @@ pt1.2.1: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.2.2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_customer_2</div></td>
+<tr id='et1.2.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_customer_2</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.2')" >
-        pass</a>
-    <div id='div_pt1.2.2' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.2.2')" >
+        error</a>
+    <div id='div_et1.2.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.2.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2.2: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.2.2: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-feadde89e475d10dbbab634dcfef8270', 'responseTime': '2020-09-21 17:52:51', 'ret': '0', 'success': '0', 'val': {'relationStatus': '1'}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 46, in test_customer
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -737,22 +881,34 @@ pt1.2.2: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.2.3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_customer_3</div></td>
+<tr id='et1.2.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_customer_3</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.3')" >
-        pass</a>
-    <div id='div_pt1.2.3' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.2.3')" >
+        error</a>
+    <div id='div_et1.2.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.2.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2.3: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.2.3: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-dd5560a0933a56d0e0bf97007e86faf7', 'responseTime': '2020-09-21 17:52:52', 'ret': '0', 'success': '0', 'val': {'relationStatus': '1'}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 46, in test_customer
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -762,22 +918,34 @@ pt1.2.3: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.2.4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_customer_4</div></td>
+<tr id='et1.2.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_customer_4</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.4')" >
-        pass</a>
-    <div id='div_pt1.2.4' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.2.4')" >
+        error</a>
+    <div id='div_et1.2.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.2.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2.4: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.2.4: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-9adb54b085424fe6d245a789029977a2', 'responseTime': '2020-09-21 17:52:52', 'ret': '0', 'success': '0', 'val': {'relationStatus': '1'}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 46, in test_customer
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -787,22 +955,34 @@ pt1.2.4: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.2.5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_customer_5</div></td>
+<tr id='et1.2.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_customer_5</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.5')" >
-        pass</a>
-    <div id='div_pt1.2.5' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.2.5')" >
+        error</a>
+    <div id='div_et1.2.5' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.5').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.2.5').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2.5: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.2.5: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-6548dd0080c7ca618a325dd888fb1049', 'responseTime': '2020-09-21 17:52:53', 'ret': '0', 'success': '0', 'val': [{'addCashEventStatus': '0', 'applicableItemId': '', 'applicableItemName': '', 'applicableSpecificItemId': '', 'applicableSpecificItemName': '', 'averagePrice': '', 'balanceAmount': '1000.0000', 'balanceGiftAmount': '0.0000', 'balanceRechargeAmount': '1000.0000', 'balanceTimes': '', 'cardName': '储值卡xyz', 'cardType': '1', 'deleteYn': '1', 'enjoyDiscount': '70', 'expireTime': '253402271999000', 'giftAmount': '0.0000', 'lastAveragePrice': '', 'memberCardTemplateId': '465599316220481536', 'membershipCardCode': 'VIP00203', 'membershipCardId': '505478666966134784', 'membershipCardStatus': '1', 'purchasePrice': '', 'purchaseTimes': '', 'rechargeAmount': '1000.0000', 'upgradeYn': '1', 'useMonth': '9999'}, {'addCashEventStatus': '0', 'applicableItemId': '5', 'applicableItemName': '洗吹', 'applicableSpecificItemId': '', 'applicableSpecificItemName': '全部洗吹项目', 'averagePrice': '20.00', 'balanceAmount': '0', 'balanceGiftAmount': '0', 'balanceRechargeAmount': '0', 'balanceTimes': '100', 'cardName': '计次卡测试', 'cardType': '2', 'deleteYn': '1', 'enjoyDiscount': '', 'expireTime': '253402271999000', 'giftAmount': '', 'lastAveragePrice': '20.00', 'memberCardTemplateId': '503611922391625728', 'membershipCardCode': 'VIP00204', 'membershipCardId': '505478669998616576', 'membershipCardStatus': '1', 'purchasePrice': '2000.0000', 'purchaseTimes': '100', 'rechargeAmount': '', 'upgradeYn': '0', 'useMonth': '9999'}, {'addCashEventStatus': '0', 'applicableItemId': '', 'applicableItemName': '', 'applicableSpecificItemId': '', 'applicableSpecificItemName': '', 'averagePrice': '', 'balanceAmount': '0', 'balanceGiftAmount': '0', 'balanceRechargeAmount': '0', 'balanceTimes': '0', 'cardName': '年卡1', 'cardType': '3', 'deleteYn': '1', 'enjoyDiscount': '95', 'expireTime': '1631807999000', 'giftAmount': '', 'lastAveragePrice': '', 'memberCardTemplateId': '463767922616791040', 'membershipCardCode': 'VIP00205', 'membershipCardId': '505478672133517312', 'membershipCardStatus': '1', 'purchasePrice': '1000.0000', 'purchaseTimes': '0', 'rechargeAmount': '', 'upgradeYn': '0', 'useMonth': '12'}]}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 46, in test_customer
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -812,22 +992,34 @@ pt1.2.5: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.2.6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_customer_6</div></td>
+<tr id='et1.2.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_customer_6</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.6')" >
-        pass</a>
-    <div id='div_pt1.2.6' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.2.6')" >
+        error</a>
+    <div id='div_et1.2.6' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.6').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.2.6').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2.6: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.2.6: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-d1e19d387847c82e38a64b6bb22d791a', 'responseTime': '2020-09-21 17:52:53', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 46, in test_customer
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -837,22 +1029,34 @@ pt1.2.6: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.2.7' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_customer_7</div></td>
+<tr id='et1.2.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_customer_7</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.7')" >
-        pass</a>
-    <div id='div_pt1.2.7' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.2.7')" >
+        error</a>
+    <div id='div_et1.2.7' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.7').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.2.7').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2.7: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.2.7: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-5f31baf2ac3751c2f097ca8db1d0ee91', 'responseTime': '2020-09-21 17:52:54', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 46, in test_customer
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -862,22 +1066,34 @@ pt1.2.7: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.2.8' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_customer_8</div></td>
+<tr id='et1.2.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_customer_8</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.8')" >
-        pass</a>
-    <div id='div_pt1.2.8' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.2.8')" >
+        error</a>
+    <div id='div_et1.2.8' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.8').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.2.8').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2.8: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.2.8: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-2f4fb5bd7f6f002e0537b8a8de3b44c0', 'responseTime': '2020-09-21 17:52:57', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_02_customer.py", line 46, in test_customer
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -887,32 +1103,44 @@ pt1.2.8: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>test_case.test_03_emplyoee.TestHttpRequest</td>
     <td>10</td>
+    <td>0</td>
+    <td>0</td>
     <td>10</td>
-    <td>0</td>
-    <td>0</td>
     <td><a href="javascript:showClassDetail('c1.3',10)">Detail</a></td>
     <td>&nbsp;</td>
 </tr>
 
-<tr id='pt1.3.1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_01</div></td>
+<tr id='et1.3.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_01</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3.1')" >
-        pass</a>
-    <div id='div_pt1.3.1' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.3.1')" >
+        error</a>
+    <div id='div_et1.3.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.3.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3.1: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.3.1: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-719459f24f0ebf5ff1c83d322bd361eb', 'responseTime': '2020-09-21 17:52:58', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 29, in test_employee
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 43, in test_employee
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -922,22 +1150,34 @@ pt1.3.1: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.3.2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_02</div></td>
+<tr id='et1.3.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_02</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3.2')" >
-        pass</a>
-    <div id='div_pt1.3.2' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.3.2')" >
+        error</a>
+    <div id='div_et1.3.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.3.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3.2: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.3.2: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-96aef67597fbf0a9999cc3d3470de948', 'responseTime': '2020-09-21 17:53:00', 'ret': '0', 'success': '0', 'val': [{'employeeCompleteStatus': '1', 'employeeHeadImageUrl': 'http://ossuat.round-table-union.com/343732200141791232/employeeLogoImage/343732200062099456/7a309a021eac10928e6ccbb2a0a6e332.jpg', 'employeeId': '343732200062099456', 'employeeNickName': '吴迪', 'positionName': '店主', 'showStatus': '1', 'workStatus': '0'}, {'employeeCompleteStatus': '0', 'employeeHeadImageUrl': '', 'employeeId': '505478695282921472', 'employeeNickName': '剑琅联盟', 'positionName': '店长', 'showStatus': '1', 'workStatus': '0'}, {'employeeCompleteStatus': '0', 'employeeHeadImageUrl': '', 'employeeId': '505475623747964928', 'employeeNickName': '剑琅联盟', 'positionName': '店长', 'showStatus': '1', 'workStatus': '0'}, {'employeeCompleteStatus': '0', 'employeeHeadImageUrl': '', 'employeeId': '505378264229728256', 'employeeNickName': '牛哥', 'positionName': '店长', 'showStatus': '1', 'workStatus': '0'}, {'employeeCompleteStatus': '0', 'employeeHeadImageUrl': '', 'employeeId': '505356577140494336', 'employeeNickName': '琅', 'positionName': '店长', 'showStatus': '1', 'workStatus': '0'}, {'employeeCompleteStatus': '0', 'employeeHeadImageUrl': '', 'employeeId': '464854987290226688', 'employeeNickName': '王磊1', 'positionName': '店长', 'showStatus': '1', 'workStatus': '0'}, {'employeeCompleteStatus': '0', 'employeeHeadImageUrl': '', 'employeeId': '465985919050485760', 'employeeNickName': '哈哈', 'positionName': '总监', 'showStatus': '1', 'workStatus': '0'}, {'employeeCompleteStatus': '0', 'employeeHeadImageUrl': '', 'employeeId': '495635425165332480', 'employeeNickName': '嘿嘿', 'positionName': '美发师', 'showStatus': '1', 'workStatus': '0'}]}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 29, in test_employee
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 43, in test_employee
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -947,22 +1187,34 @@ pt1.3.2: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.3.3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_03</div></td>
+<tr id='et1.3.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_03</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3.3')" >
-        pass</a>
-    <div id='div_pt1.3.3' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.3.3')" >
+        error</a>
+    <div id='div_et1.3.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.3.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3.3: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.3.3: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '请填写姓名', 'requestUUID': 'JY-b10af58e4de845ed15c42d420a072127', 'responseTime': '2020-09-21 17:53:00', 'ret': 'ERROR_CODE_10002', 'success': '1', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 29, in test_employee
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 43, in test_employee
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -972,22 +1224,34 @@ pt1.3.3: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.3.4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_04</div></td>
+<tr id='et1.3.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_04</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3.4')" >
-        pass</a>
-    <div id='div_pt1.3.4' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.3.4')" >
+        error</a>
+    <div id='div_et1.3.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.3.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3.4: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.3.4: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '手机号不能为空', 'requestUUID': 'JY-4d684088cdbb070cb3f5f5e7c5bd6efd', 'responseTime': '2020-09-21 17:53:01', 'ret': 'ERROR_CODE_10002', 'success': '1', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 29, in test_employee
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 43, in test_employee
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -997,22 +1261,34 @@ pt1.3.4: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.3.5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_05</div></td>
+<tr id='et1.3.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_05</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3.5')" >
-        pass</a>
-    <div id='div_pt1.3.5' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.3.5')" >
+        error</a>
+    <div id='div_et1.3.5' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3.5').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.3.5').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3.5: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.3.5: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '请选择员工头衔', 'requestUUID': 'JY-9ab4547073f339cf1561f4faa643679a', 'responseTime': '2020-09-21 17:53:01', 'ret': 'ERROR_CODE_10002', 'success': '1', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 29, in test_employee
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 43, in test_employee
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1022,22 +1298,34 @@ pt1.3.5: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.3.6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_06</div></td>
+<tr id='et1.3.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_06</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3.6')" >
-        pass</a>
-    <div id='div_pt1.3.6' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.3.6')" >
+        error</a>
+    <div id='div_et1.3.6' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3.6').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.3.6').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3.6: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.3.6: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '请选择权限', 'requestUUID': 'JY-4ee1bba94fcd365c2cb62d28a9053a97', 'responseTime': '2020-09-21 17:53:02', 'ret': 'ERROR_CODE_10002', 'success': '1', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 29, in test_employee
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 43, in test_employee
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1047,22 +1335,34 @@ pt1.3.6: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.3.7' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_07</div></td>
+<tr id='et1.3.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_07</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3.7')" >
-        pass</a>
-    <div id='div_pt1.3.7' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.3.7')" >
+        error</a>
+    <div id='div_et1.3.7' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3.7').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.3.7').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3.7: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.3.7: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '金额错误', 'requestUUID': 'JY-a41a246b320eb9d962b6d03283d4d93b', 'responseTime': '2020-09-21 17:53:02', 'ret': 'ERROR_CODE_10002', 'success': '1', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 29, in test_employee
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 43, in test_employee
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1072,22 +1372,34 @@ pt1.3.7: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.3.8' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_08</div></td>
+<tr id='et1.3.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_08</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3.8')" >
-        pass</a>
-    <div id='div_pt1.3.8' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.3.8')" >
+        error</a>
+    <div id='div_et1.3.8' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3.8').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.3.8').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3.8: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.3.8: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '该手机号已被注册', 'requestUUID': 'JY-79c56321c4a4a50ca7b72e96846104d0', 'responseTime': '2020-09-21 17:53:07', 'ret': 'ERROR_CODE_10002', 'success': '1', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 29, in test_employee
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 43, in test_employee
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1097,22 +1409,34 @@ pt1.3.8: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.3.9' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_09</div></td>
+<tr id='et1.3.9' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_09</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3.9')" >
-        pass</a>
-    <div id='div_pt1.3.9' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.3.9')" >
+        error</a>
+    <div id='div_et1.3.9' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3.9').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.3.9').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3.9: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.3.9: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '错误的手机号，请确认手机号信息', 'requestUUID': 'JY-9c5adcc1c39e547accc8fbcf8c50e942', 'responseTime': '2020-09-21 17:53:07', 'ret': 'ERROR_CODE_10002', 'success': '1', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 29, in test_employee
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 43, in test_employee
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1122,22 +1446,34 @@ pt1.3.9: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.3.10' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_10</div></td>
+<tr id='et1.3.10' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_10</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3.10')" >
-        pass</a>
-    <div id='div_pt1.3.10' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.3.10')" >
+        error</a>
+    <div id='div_et1.3.10' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3.10').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.3.10').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.3.10: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.3.10: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '错误的手机号，请确认手机号信息', 'requestUUID': 'JY-b9de230dc1c82b01eb9de62fd18d9829', 'responseTime': '2020-09-21 17:53:07', 'ret': 'ERROR_CODE_10002', 'success': '1', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 29, in test_employee
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_03_emplyoee.py", line 43, in test_employee
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1147,32 +1483,44 @@ pt1.3.10: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages
     <td></td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>test_case.test_04_emplyoee_update.TestHttpRequest</td>
     <td>6</td>
+    <td>0</td>
+    <td>0</td>
     <td>6</td>
-    <td>0</td>
-    <td>0</td>
     <td><a href="javascript:showClassDetail('c1.4',6)">Detail</a></td>
     <td>&nbsp;</td>
 </tr>
 
-<tr id='pt1.4.1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_update_1</div></td>
+<tr id='et1.4.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_update_1</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4.1')" >
-        pass</a>
-    <div id='div_pt1.4.1' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.4.1')" >
+        error</a>
+    <div id='div_et1.4.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.4.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.4.1: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.4.1: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-c245d4c7c56b84174eea26aa1f3bd593', 'responseTime': '2020-09-21 17:53:08', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 29, in test_employee_update
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 40, in test_employee_update
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1182,22 +1530,34 @@ pt1.4.1: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.4.2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_update_2</div></td>
+<tr id='et1.4.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_update_2</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4.2')" >
-        pass</a>
-    <div id='div_pt1.4.2' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.4.2')" >
+        error</a>
+    <div id='div_et1.4.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.4.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.4.2: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.4.2: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-d4b2f63337387a7c5721b8773c8929a7', 'responseTime': '2020-09-21 17:53:09', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 29, in test_employee_update
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 40, in test_employee_update
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1207,22 +1567,34 @@ pt1.4.2: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.4.3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_update_3</div></td>
+<tr id='et1.4.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_update_3</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4.3')" >
-        pass</a>
-    <div id='div_pt1.4.3' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.4.3')" >
+        error</a>
+    <div id='div_et1.4.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.4.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.4.3: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.4.3: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-f575ffd3823a01228a95ba39ec5de95e', 'responseTime': '2020-09-21 17:53:11', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 29, in test_employee_update
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 40, in test_employee_update
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1232,22 +1604,34 @@ pt1.4.3: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.4.4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_update_4</div></td>
+<tr id='et1.4.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_update_4</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4.4')" >
-        pass</a>
-    <div id='div_pt1.4.4' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.4.4')" >
+        error</a>
+    <div id='div_et1.4.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.4.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.4.4: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.4.4: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-f6586ef04c9fb816ba09e3834bf27194', 'responseTime': '2020-09-21 17:53:12', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 29, in test_employee_update
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 40, in test_employee_update
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1257,22 +1641,34 @@ pt1.4.4: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.4.5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_update_5</div></td>
+<tr id='et1.4.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_update_5</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4.5')" >
-        pass</a>
-    <div id='div_pt1.4.5' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.4.5')" >
+        error</a>
+    <div id='div_et1.4.5' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4.5').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.4.5').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.4.5: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.4.5: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-cac9e96aead14ce99ea03b069f6cbbba', 'responseTime': '2020-09-21 17:53:12', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 29, in test_employee_update
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 40, in test_employee_update
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1282,22 +1678,34 @@ pt1.4.5: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='pt1.4.6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_employee_update_6</div></td>
+<tr id='et1.4.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_employee_update_6</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4.6')" >
-        pass</a>
-    <div id='div_pt1.4.6' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.4.6')" >
+        error</a>
+    <div id='div_et1.4.6' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4.6').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_et1.4.6').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.4.6: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+et1.4.6: C:\Python38\lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-{'msg': '操作成功', 'requestUUID': 'JY-1e94905f0da03372f3022d9140b900ae', 'responseTime': '2020-09-21 17:53:13', 'ret': '0', 'success': '0', 'val': {}}
+Traceback (most recent call last):
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 29, in test_employee_update
+    self.assertEqual(item['msg'], res.json()['msg'])
+AttributeError: 'dict' object has no attribute 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python38\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\python_test\autotesting-rtb-core\test_case\test_04_emplyoee_update.py", line 40, in test_employee_update
+    logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+AttributeError: 'dict' object has no attribute 'json'
 
 
         </pre>
@@ -1310,9 +1718,9 @@ pt1.4.6: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
 <tr id='total_row'>
     <td>Total</td>
     <td>34</td>
-    <td class="text text-success">34</td>
+    <td class="text text-success">0</td>
     <td class="text text-danger">0</td>
-    <td class="text text-warning">0</td>
+    <td class="text text-warning">34</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr>
@@ -1323,7 +1731,7 @@ pt1.4.6: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <script type="text/javascript">
 var data = [
 	{
-		value: 0,
+		value: 34,
 		color: "#f44455",
 		label: "Error",
 		labelColor: 'white',
@@ -1337,7 +1745,7 @@ var data = [
 		labelFontSize: '16'
 	},
 	{
-		value : 34,
+		value : 0,
 		color : "#5fc27e",
 		label : "Pass",
 		labelColor: 'white',
