@@ -38,6 +38,8 @@ class DoExcel(object):
                 row_data['data'] = sheet.cell(i, 3).value.replace('${yearCardId}', StartBefore().get_data_init(4))
             elif sheet.cell(i, 3).value.find('${employeeId}') != -1:
                 row_data['data'] = sheet.cell(i, 3).value.replace('${employeeId}', StartBefore().get_data_init(5))
+            elif sheet.cell(i, 3).value.find('${time_now}') != -1:
+                row_data['data'] = sheet.cell(i, 3).value.replace('${time_now}', StartBefore().get_time_now())
             else:
                 row_data['data'] = sheet.cell(i, 3).value
 

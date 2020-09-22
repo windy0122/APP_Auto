@@ -5000,3 +5000,235 @@ Tue, 22 Sep 2020 14:14:58 test_01_receipt_pytest.py test_receipt [line:42] 获�
 Tue, 22 Sep 2020 14:14:58 test_01_receipt_pytest.py test_receipt [line:42] 获取的结果是：操作成功
 Tue, 22 Sep 2020 14:14:59 test_01_receipt_pytest.py test_receipt [line:42] 获取的结果是：操作成功
 Tue, 22 Sep 2020 14:15:00 test_01_receipt_pytest.py test_receipt [line:42] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:33:53 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:33:54 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:33:54 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:33:55 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:33:56 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:33:56 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:33:58 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:33:58 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:33:59 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:33:59 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:35:04 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:35:05 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:35:05 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:35:06 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:35:06 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:35:07 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:35:09 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:35:10 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:35:10 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:35:11 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:36:59 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:00 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:00 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:00 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:01 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:03 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:04 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:04 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:05 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:05 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:06 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:06 test_02_customer.py test_customer [line:41] 执行出错：'操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+
+Tue, 22 Sep 2020 17:37:06 test_02_customer.py test_customer [line:46] 获取的结果是：JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Tue, 22 Sep 2020 17:37:07 test_02_customer.py test_customer [line:41] 执行出错：'操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+
+Tue, 22 Sep 2020 17:37:07 test_02_customer.py test_customer [line:46] 获取的结果是：JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Tue, 22 Sep 2020 17:37:07 test_02_customer.py test_customer [line:41] 执行出错：'操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+
+Tue, 22 Sep 2020 17:37:07 test_02_customer.py test_customer [line:46] 获取的结果是：JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Tue, 22 Sep 2020 17:37:07 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:08 test_02_customer.py test_customer [line:41] 执行出错：'操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+Tue, 22 Sep 2020 17:37:08 test_02_customer.py test_customer [line:46] 获取的结果是：会员卡不可删除
+Tue, 22 Sep 2020 17:37:08 test_02_customer.py test_customer [line:41] 执行出错：'操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+Tue, 22 Sep 2020 17:37:08 test_02_customer.py test_customer [line:46] 获取的结果是：会员卡不可删除
+Tue, 22 Sep 2020 17:37:08 test_02_customer.py test_customer [line:41] 执行出错：'操作成功' != '会员卡删除失败'
+- 操作成功
++ 会员卡删除失败
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡删除失败'
+- 操作成功
++ 会员卡删除失败
+
+Tue, 22 Sep 2020 17:37:08 test_02_customer.py test_customer [line:46] 获取的结果是：会员卡删除失败
+Tue, 22 Sep 2020 17:37:09 test_03_emplyoee.py test_employee [line:43] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:09 test_03_emplyoee.py test_employee [line:43] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:11 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请填写姓名
+Tue, 22 Sep 2020 17:37:11 test_03_emplyoee.py test_employee [line:43] 获取的结果是：手机号不能为空
+Tue, 22 Sep 2020 17:37:11 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请选择员工头衔
+Tue, 22 Sep 2020 17:37:11 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请选择权限
+Tue, 22 Sep 2020 17:37:11 test_03_emplyoee.py test_employee [line:43] 获取的结果是：金额错误
+Tue, 22 Sep 2020 17:37:12 test_03_emplyoee.py test_employee [line:43] 获取的结果是：该手机号已被注册
+Tue, 22 Sep 2020 17:37:12 test_03_emplyoee.py test_employee [line:43] 获取的结果是：错误的手机号，请确认手机号信息
+Tue, 22 Sep 2020 17:37:13 test_03_emplyoee.py test_employee [line:43] 获取的结果是：错误的手机号，请确认手机号信息
+Tue, 22 Sep 2020 17:37:13 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:13 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:14 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:14 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:15 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:37:16 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:03 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:04 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:04 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:05 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:05 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:06 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:06 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:08 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:08 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:10 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:10 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:10 test_02_customer.py test_customer [line:41] 执行出错：'操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+
+Tue, 22 Sep 2020 17:40:10 test_02_customer.py test_customer [line:46] 获取的结果是：JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Tue, 22 Sep 2020 17:40:10 test_02_customer.py test_customer [line:41] 执行出错：'操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+
+Tue, 22 Sep 2020 17:40:10 test_02_customer.py test_customer [line:46] 获取的结果是：JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Tue, 22 Sep 2020 17:40:11 test_02_customer.py test_customer [line:41] 执行出错：'操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
+- 操作成功
++ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+
+Tue, 22 Sep 2020 17:40:11 test_02_customer.py test_customer [line:46] 获取的结果是：JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
+Tue, 22 Sep 2020 17:40:11 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:12 test_03_emplyoee.py test_employee [line:43] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:13 test_03_emplyoee.py test_employee [line:43] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:13 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请填写姓名
+Tue, 22 Sep 2020 17:40:14 test_03_emplyoee.py test_employee [line:43] 获取的结果是：手机号不能为空
+Tue, 22 Sep 2020 17:40:14 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请选择员工头衔
+Tue, 22 Sep 2020 17:40:14 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请选择权限
+Tue, 22 Sep 2020 17:40:14 test_03_emplyoee.py test_employee [line:43] 获取的结果是：金额错误
+Tue, 22 Sep 2020 17:40:14 test_03_emplyoee.py test_employee [line:43] 获取的结果是：该手机号已被注册
+Tue, 22 Sep 2020 17:40:15 test_03_emplyoee.py test_employee [line:43] 获取的结果是：错误的手机号，请确认手机号信息
+Tue, 22 Sep 2020 17:40:15 test_03_emplyoee.py test_employee [line:43] 获取的结果是：错误的手机号，请确认手机号信息
+Tue, 22 Sep 2020 17:40:15 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:16 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:17 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:17 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:17 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:18 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:18 test_06_membercard.py test_member_card [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:19 test_06_membercard.py test_member_card [line:40] 获取的结果是：操作成功
+Tue, 22 Sep 2020 17:40:19 test_06_membercard.py test_member_card [line:40] 获取的结果是：操作成功

@@ -1,13 +1,11 @@
 import logging
-import MySQLdb
-import redis
 import random
 import requests
 import json
 from openpyxl import load_workbook
+import time
 
 from tools.project_path import *
-from tools.read_config import ReadConfig
 
 
 class StartBefore(object):
@@ -39,14 +37,19 @@ class StartBefore(object):
                     }
 
         # urllib3.disable_warnings()
-        r = requests.post(url, headers=header, data=json.dumps(payload), verify=False)
-        res = r.json()
-        global shop_tk
-        global shop_id
-        shop_tk = res['val']['tk']
-        shop_id = res['val']['shopId']
-        self.write_back_init(test_data_path, 'init', 6, shop_tk)
-        return shop_tk, shop_id
+        try:
+            r = requests.post(url, headers=header, data=json.dumps(payload), verify=False)
+            res = r.json()
+            # print(res)
+            global shop_tk
+            global shop_id
+            shop_tk = res['val']['tk']
+            shop_id = res['val']['shopId']
+            self.write_back_init(test_data_path, 'init', 6, shop_tk)
+            return shop_tk, shop_id
+        except Exception as e:
+            logging.info('登录失败')
+            raise e
 
     # 查询店铺顾客手机号
     # @staticmethod
@@ -130,13 +133,20 @@ class StartBefore(object):
         if isinstance(res['val'], list) and len(res['val']) > 1:
             self.write_back_init(test_data_path, 'init', 5, res['val'][1]['employeeId'])
 
+    # 获取当前时间时间戳
+    @staticmethod
+    def get_time_now():
+        time_now = round(time.time()*1000)
+        return str(time_now)
+
 
 if __name__ == '__main__':
     start = StartBefore()
-    # print(start.get_token())
+    print(start.get_token())
     # print(start.get_phone_num())
-    print(start.new_customer_phone())
+    # print(start.new_customer_phone())
     # print(start.get_data_init(6))
+    # print(start.get_time_now())
 
 
 

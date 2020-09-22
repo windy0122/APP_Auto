@@ -25,18 +25,18 @@ class TestHttpRequest(unittest.TestCase):
         res = r.json()
         # print(res_val)
         try:
-            self.assertEqual(item['msg'], res.json()['msg'])
-            print(res.json())
+            self.assertEqual(item['msg'], res['msg'])
+            # print(res.json())
             test_tesult = 'PASS'
 
         except AssertionError as e:
             test_tesult = 'FAILED'
             logging.exception('执行出错：{0}'.format(e))
-            print(res.json())
+            # print(res.json())
             raise e
         finally:
             StartBefore.write_back(test_data_path, item['sheet_name'], int(item['case_id']) + 1, str(res), test_tesult)
-            logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+            logging.info('获取的结果是：{0}'.format(res['msg']))
 
 
 

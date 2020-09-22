@@ -1,9 +1,6 @@
 import requests
 import logging
 import json
-# from test_result.log.api_logging import MyLog
-#
-# my_logger = MyLog()
 
 
 class HttpRequest(object):

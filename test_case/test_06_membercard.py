@@ -8,7 +8,7 @@ import logging
 from tools.common import StartBefore
 
 # my_logger = MyLog()
-test_data = DoExcel.get_data(test_data_path, 'employee_update')
+test_data = DoExcel.get_data(test_data_path, 'membercard')
 
 
 @ddt
@@ -20,7 +20,7 @@ class TestHttpRequest(unittest.TestCase):
         pass
 
     @data(*test_data)
-    def test_employee_update(self, item):
+    def test_member_card(self, item):
         test_tesult = None
         r = HttpRequest.http_request(item['url'], eval(item['data']), item['http_method'], eval(item['header']))
         res = r.json()
