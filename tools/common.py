@@ -51,33 +51,21 @@ class StartBefore(object):
     # 查询店铺顾客手机号
     # @staticmethod
     def get_phone_num(self):
-        # 打开数据库连接
-        db_uat_info = eval(ReadConfig.get_config(test_config_path, 'DB', 'db_uat_config'))
-        connection_uat = MySQLdb.connect(
-            host=db_uat_info['host'],
-            user=db_uat_info['user'],
-            passwd=db_uat_info['password'],
-            port=3306,
-            db=db_uat_info['database'],
-            charset="utf8"
-        )
 
-        # 使用cursor()方法获取操作游标
-        c = connection_uat.cursor()
+        url = 'https://uatleague.round-table-union.com/api/rts/member/membership/searchMembership/V133?condition='
 
-        # 使用execute方法执行SQL语句
-        serch_customer = 'select * from tb_member_membership where Base_Shop_Id =' + shop_id
+        header = {'content-type': 'application/json',
+                  'version': '1.4.1',
+                  'platform': 'iOS',
+                  'tk': self.get_data_init(6)
+                  }
 
-        c.execute(serch_customer)
-
-        # 使用 fetchone() 方法获取一条数据
+        r = requests.get(url, headers=header, verify=False)
+        member_res = r.json()['val']['membershipList']
         self.shop_customer = []
-        data = c.fetchall()
-        for i in range(len(data)):
-            self.shop_customer.append(data[i][5])
-
-        # 关闭数据库连接
-        connection_uat.close()
+        if len(member_res) > 0:
+            for i in range(len(member_res)):
+                self.shop_customer.append(member_res[i]['membershipMobile'])
 
         # 返回顾客号码列表
         return self.shop_customer
@@ -106,46 +94,6 @@ class StartBefore(object):
         sheet = wb['init']
         init_data = sheet.cell(2, num).value
         return init_data
-
-    # # 获取新建顾客id
-    # @staticmethod
-    # def get_customer_id():
-    #     wb = load_workbook(test_data_path)
-    #     sheet = wb['init']
-    #     customer_id = sheet.cell(2, 1).value
-    #     return customer_id
-    #
-    # # 获取顾客储值卡id
-    # @staticmethod
-    # def get_stored_card_id():
-    #     wb = load_workbook(test_data_path)
-    #     sheet = wb['init']
-    #     stored_card_id = sheet.cell(2, 2).value
-    #     return stored_card_id
-    #
-    # # 获取顾客计次卡id
-    # @staticmethod
-    # def get_time_card_id():
-    #     wb = load_workbook(test_data_path)
-    #     sheet = wb['init']
-    #     time_card_id = sheet.cell(2, 3).value
-    #     return time_card_id
-    #
-    # # 获取顾客年卡id
-    # @staticmethod
-    # def get_year_card_id():
-    #     wb = load_workbook(test_data_path)
-    #     sheet = wb['init']
-    #     year_card_id = sheet.cell(2, 4).value
-    #     return year_card_id
-    #
-    # # 获取员工id
-    # @staticmethod
-    # def get_employee_id():
-    #     wb = load_workbook(test_data_path)
-    #     sheet = wb['init']
-    #     employee_id = sheet.cell(2, 5).value
-    #     return employee_id
 
     # 写入result(返回数据)，写入TestResult(pass or failed)
     @staticmethod
@@ -187,8 +135,8 @@ if __name__ == '__main__':
     start = StartBefore()
     # print(start.get_token())
     # print(start.get_phone_num())
-    # print(start.new_customer_phone())
-    print(start.get_data_init(6))
+    print(start.new_customer_phone())
+    # print(start.get_data_init(6))
 
 
 

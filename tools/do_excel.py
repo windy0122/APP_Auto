@@ -13,7 +13,7 @@ class DoExcel(object):
     def get_data(file_name, sheet_name):
         # user_tk = StartBefore().get_token()[0]
         customer_phone = StartBefore().new_customer_phone()
-        url_uat = ReadConfig().get_config(test_config_path, 'URL', 'uat_url')
+        url_uat = ReadConfig().get_config(test_config_path, 'URL', 'url')
         wb = load_workbook(file_name)
         sheet = wb[sheet_name]
         # mode = eval(ReadConfig.get_config(test_config_path, 'MODE', 'mode'))
@@ -52,17 +52,6 @@ class DoExcel(object):
             row_data['sheet_name'] = sheet_name
             test_data.append(row_data)
 
-        # for case_id in mode[key]:
-        #     row_data = dict()
-        #     row_data['case_id'] = sheet.cell(case_id+1, 1).value
-        #     row_data['url'] = url_uat + sheet.cell(case_id+1, 2).value
-        #     row_data['data'] = sheet.cell(case_id+1, 3).value
-        #     row_data['title'] = sheet.cell(case_id+1, 4).value
-        #     row_data['http_method'] = sheet.cell(case_id+1, 5).value
-        #     row_data['header'] = sheet.cell(case_id+1, 6).value
-        #     row_data['msg'] = sheet.cell(i, 9).value
-        #     row_data['sheet_name'] = key
-        #     test_data.append(row_data)
         return test_data
 
 

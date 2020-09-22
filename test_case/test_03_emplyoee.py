@@ -21,27 +21,26 @@ class TestHttpRequest(unittest.TestCase):
 
     @data(*test_data)
     def test_employee(self, item):
-        res = HttpRequest.http_request(item['url'], eval(item['data']), item['http_method'], eval(item['header']))
-        # res_val = res.json()
-        # print(res)
+        test_tesult = None
+        r = HttpRequest.http_request(item['url'], eval(item['data']), item['http_method'], eval(item['header']))
+        res = r.json()
+        # print(res_val)
         try:
             self.assertEqual(item['msg'], res.json()['msg'])
-            print(res.json())
-            TestResult = 'PASS'
+            # print(res.json())
+            test_tesult = 'PASS'
 
             # 将新建的员工写入到test文件的init表中
             StartBefore().write_employee_id(res.json())
 
         except AssertionError as e:
-            TestResult = 'FAILED'
+            test_tesult = 'FAILED'
             logging.exception('执行出错：{0}'.format(e))
-            print(res.json())
+            # print(res.json())
             raise e
         finally:
-            StartBefore.write_back(test_data_path, item['sheet_name'], int(item['case_id']) + 1, str(res.json()), TestResult)
+            StartBefore.write_back(test_data_path, item['sheet_name'], int(item['case_id']) + 1, str(res), test_tesult)
             logging.info('获取的结果是：{0}'.format(res.json()['msg']))
-
-
 
 
 

@@ -8,7 +8,7 @@ import logging
 from tools.common import StartBefore
 
 # my_logger = MyLog()
-test_data = DoExcel.get_data(test_data_path, 'employee_update')
+test_data = DoExcel.get_data(test_data_path, 'card_template')
 
 
 @ddt
@@ -21,21 +21,22 @@ class TestHttpRequest(unittest.TestCase):
 
     @data(*test_data)
     def test_card_template(self, item):
-        res = HttpRequest.http_request(item['url'], eval(item['data']), item['http_method'], eval(item['header']))
-        # res_val = res.json()
-        # print(res)
+        test_tesult = None
+        r = HttpRequest.http_request(item['url'], eval(item['data']), item['http_method'], eval(item['header']))
+        res = r.json()
+        # print(res_val)
         try:
             self.assertEqual(item['msg'], res.json()['msg'])
-            print(res.json())
-            TestResult = 'PASS'
+            # print(res.json())
+            test_tesult = 'PASS'
 
         except AssertionError as e:
-            TestResult = 'FAILED'
+            test_tesult = 'FAILED'
             logging.exception('执行出错：{0}'.format(e))
-            print(res.json())
+            # print(res.json())
             raise e
         finally:
-            StartBefore.write_back(test_data_path, item['sheet_name'], int(item['case_id']) + 1, str(res.json()), TestResult)
+            StartBefore.write_back(test_data_path, item['sheet_name'], int(item['case_id']) + 1, str(res), test_tesult)
             logging.info('获取的结果是：{0}'.format(res.json()['msg']))
 
 
