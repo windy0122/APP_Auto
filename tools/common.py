@@ -1,5 +1,5 @@
 import logging
-import MySQLdb
+#import MySQLdb
 import redis
 import random
 import requests
