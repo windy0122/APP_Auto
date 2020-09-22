@@ -1,0 +1,7 @@
+.idea/
+*.iml
+target/
+*.log
+tmlog.lck
+tmlog56.log
+
