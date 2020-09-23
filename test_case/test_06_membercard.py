@@ -6,8 +6,10 @@ from tools.project_path import *
 from tools.do_excel import DoExcel
 import logging
 from tools.common import StartBefore
+import os
 
-# my_logger = MyLog()
+current_path = os.path.basename(__file__)
+
 test_data = DoExcel.get_data(test_data_path, 'membercard')
 
 
@@ -36,7 +38,8 @@ class TestHttpRequest(unittest.TestCase):
             # print(res.json())
             raise e
         finally:
-            StartBefore.write_back(test_data_path, item['sheet_name'], int(item['case_id']) + 1, str(res), test_tesult)
+            StartBefore.write_back(test_tmp_path, 'test_result', int(item['case_id']),
+                                   int(item['case_id']) + 1, str(res), test_tesult, current_path)
             logging.info('获取的结果是：{0}'.format(res['msg']))
 
 

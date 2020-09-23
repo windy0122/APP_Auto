@@ -68,6 +68,6 @@ class DoExcel(object):
 
 
 if __name__ == '__main__':
-    res = DoExcel.get_data(test_data_path, 'employee_update')
+    res = DoExcel.get_data(test_data_path, 'customer')
     print(res)
 

@@ -45,7 +45,7 @@ class StartBefore(object):
             global shop_id
             shop_tk = res['val']['tk']
             shop_id = res['val']['shopId']
-            self.write_back_init(test_data_path, 'init', 6, shop_tk)
+            self.write_back_init(test_tmp_path, 'init', 6, shop_tk)
             return shop_tk, shop_id
         except Exception as e:
             logging.info('登录失败')
@@ -64,6 +64,7 @@ class StartBefore(object):
                   }
 
         r = requests.get(url, headers=header, verify=False)
+        # print(r.json())
         member_res = r.json()['val']['membershipList']
         self.shop_customer = []
         if len(member_res) > 0:
@@ -93,18 +94,20 @@ class StartBefore(object):
     # 获取init表中数据(1、顾客id   2、储值卡id   3、计次卡id    4、年卡id    5、员工id    6、店铺tk)
     @staticmethod
     def get_data_init(num):
-        wb = load_workbook(test_data_path)
+        wb = load_workbook(test_tmp_path)
         sheet = wb['init']
         init_data = sheet.cell(2, num).value
         return init_data
 
     # 写入result(返回数据)，写入TestResult(pass or failed)
     @staticmethod
-    def write_back(file_name, sheet_name, i, result, TestResult):
+    def write_back(file_name, sheet_name, case_id, i, result, TestResult, current_path):
         wb = load_workbook(file_name)
         sheet = wb[sheet_name]
-        sheet.cell(i, 7).value = result
-        sheet.cell(i, 8).value = TestResult
+        sheet.cell(i, 1).value = case_id
+        sheet.cell(i, 2).value = result
+        sheet.cell(i, 3).value = TestResult
+        sheet.cell(i, 4).value = current_path
         wb.save(file_name)
 
     # 写入数据到init表中
@@ -120,18 +123,18 @@ class StartBefore(object):
         if isinstance(res['val'], list):
             for i in range(len(res['val'])):
                 if res['val'][i]['cardType'] == '1':
-                    self.write_back_init(test_data_path, 'init', 2, res['val'][i]['membershipCardId'])
+                    self.write_back_init(test_tmp_path, 'init', 2, res['val'][i]['membershipCardId'])
                 elif res['val'][i]['cardType'] == '2':
-                    self.write_back_init(test_data_path, 'init', 3, res['val'][i]['membershipCardId'])
+                    self.write_back_init(test_tmp_path, 'init', 3, res['val'][i]['membershipCardId'])
                 elif res['val'][i]['cardType'] == '3':
-                    self.write_back_init(test_data_path, 'init', 4, res['val'][i]['membershipCardId'])
+                    self.write_back_init(test_tmp_path, 'init', 4, res['val'][i]['membershipCardId'])
                 else:
                     logging.info('顾客没有卡')
 
     # 将新建的员工id写入到init表中
     def write_employee_id(self, res):
         if isinstance(res['val'], list) and len(res['val']) > 1:
-            self.write_back_init(test_data_path, 'init', 5, res['val'][1]['employeeId'])
+            self.write_back_init(test_tmp_path, 'init', 5, res['val'][1]['employeeId'])
 
     # 获取当前时间时间戳
     @staticmethod
@@ -143,7 +146,7 @@ class StartBefore(object):
 if __name__ == '__main__':
     start = StartBefore()
     print(start.get_token())
-    # print(start.get_phone_num())
+    print(start.get_phone_num())
     # print(start.new_customer_phone())
     # print(start.get_data_init(6))
     # print(start.get_time_now())
