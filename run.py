@@ -20,7 +20,7 @@ suite.addTest(loder.loadTestsFromModule(test_01_receipt))
 suite.addTest(loder.loadTestsFromModule(test_02_customer))
 suite.addTest(loder.loadTestsFromModule(test_03_emplyoee))
 suite.addTest(loder.loadTestsFromModule(test_04_emplyoee_update))
-suite.addTest(loder.loadTestsFromModule(test_06_membercard))
+# suite.addTest(loder.loadTestsFromModule(test_06_membercard))
 
 
 with open(test_report_path, 'wb') as file:

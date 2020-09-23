@@ -5232,3 +5232,120 @@ Tue, 22 Sep 2020 17:40:18 test_04_emplyoee_update.py test_employee_update [line:
 Tue, 22 Sep 2020 17:40:18 test_06_membercard.py test_member_card [line:40] 获取的结果是：操作成功
 Tue, 22 Sep 2020 17:40:19 test_06_membercard.py test_member_card [line:40] 获取的结果是：操作成功
 Tue, 22 Sep 2020 17:40:19 test_06_membercard.py test_member_card [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:34:59 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:00 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:00 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:01 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:03 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:05 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:06 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:07 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:08 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:08 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:09 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:09 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:10 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:11 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:14 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:14 test_03_emplyoee.py test_employee [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:15 test_03_emplyoee.py test_employee [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:15 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请填写姓名
+Wed, 23 Sep 2020 09:35:15 test_03_emplyoee.py test_employee [line:43] 获取的结果是：手机号不能为空
+Wed, 23 Sep 2020 09:35:16 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请选择员工头衔
+Wed, 23 Sep 2020 09:35:16 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请选择权限
+Wed, 23 Sep 2020 09:35:16 test_03_emplyoee.py test_employee [line:43] 获取的结果是：金额错误
+Wed, 23 Sep 2020 09:35:17 test_03_emplyoee.py test_employee [line:43] 获取的结果是：该手机号已被注册
+Wed, 23 Sep 2020 09:35:17 test_03_emplyoee.py test_employee [line:43] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 09:35:18 test_03_emplyoee.py test_employee [line:43] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 09:35:19 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:21 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:21 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:22 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:22 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:22 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:35:23 test_06_membercard.py test_member_card [line:35] 执行出错：'操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 29, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+Wed, 23 Sep 2020 09:35:23 test_06_membercard.py test_member_card [line:40] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 09:35:24 test_06_membercard.py test_member_card [line:35] 执行出错：'操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 29, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+Wed, 23 Sep 2020 09:35:24 test_06_membercard.py test_member_card [line:40] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 09:35:25 test_06_membercard.py test_member_card [line:35] 执行出错：'操作成功' != '会员卡删除失败'
+- 操作成功
++ 会员卡删除失败
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 29, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡删除失败'
+- 操作成功
++ 会员卡删除失败
+
+Wed, 23 Sep 2020 09:35:25 test_06_membercard.py test_member_card [line:40] 获取的结果是：会员卡删除失败
+Wed, 23 Sep 2020 09:37:09 common.py get_token [line:51] 登录失败
+Wed, 23 Sep 2020 09:39:32 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:33 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:33 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:34 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:35 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:35 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:36 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:37 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:39 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:39 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:40 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:42 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:44 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:46 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:46 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:47 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:47 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:48 test_02_customer.py test_customer [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:49 test_03_emplyoee.py test_employee [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:50 test_03_emplyoee.py test_employee [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:50 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请填写姓名
+Wed, 23 Sep 2020 09:39:50 test_03_emplyoee.py test_employee [line:43] 获取的结果是：手机号不能为空
+Wed, 23 Sep 2020 09:39:51 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请选择员工头衔
+Wed, 23 Sep 2020 09:39:51 test_03_emplyoee.py test_employee [line:43] 获取的结果是：请选择权限
+Wed, 23 Sep 2020 09:39:51 test_03_emplyoee.py test_employee [line:43] 获取的结果是：金额错误
+Wed, 23 Sep 2020 09:39:51 test_03_emplyoee.py test_employee [line:43] 获取的结果是：该手机号已被注册
+Wed, 23 Sep 2020 09:39:52 test_03_emplyoee.py test_employee [line:43] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 09:39:52 test_03_emplyoee.py test_employee [line:43] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 09:39:52 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:53 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:54 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:55 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:56 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 09:39:57 test_04_emplyoee_update.py test_employee_update [line:40] 获取的结果是：操作成功

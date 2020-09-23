@@ -27,9 +27,19 @@ class DoExcel(object):
             row_data['url'] = url_uat + sheet.cell(i, 2).value
 
             if sheet.cell(i, 3).value.find('${phone_num}') != -1:
-                row_data['data'] = sheet.cell(i, 3).value.replace('${phone_num}', customer_phone)
+                if sheet.cell(i, 3).value.find('${employeeId}') != -1:
+                    row_data['data'] = sheet.cell(i, 3).value.replace('${employeeId}', StartBefore().get_data_init(5))\
+                                        .replace('${phone_num}', customer_phone)
+                else:
+                    row_data['data'] = sheet.cell(i, 3).value.replace('${phone_num}', customer_phone)
+
             elif sheet.cell(i, 3).value.find('${memberId}') != -1:
-                row_data['data'] = sheet.cell(i, 3).value.replace('${memberId}', StartBefore().get_data_init(1))
+                if sheet.cell(i, 3).value.find('${time_now}') != -1:
+                    row_data['data'] = sheet.cell(i, 3).value.replace('${time_now}', StartBefore().get_time_now()) \
+                                        .replace('${memberId}', StartBefore().get_data_init(1))
+                else:
+                    row_data['data'] = sheet.cell(i, 3).value.replace('${memberId}', StartBefore().get_data_init(1))
+
             elif sheet.cell(i, 3).value.find('${storedCardId}') != -1:
                 row_data['data'] = sheet.cell(i, 3).value.replace('${storedCardId}', StartBefore().get_data_init(2))
             elif sheet.cell(i, 3).value.find('${timeCardId}') != -1:

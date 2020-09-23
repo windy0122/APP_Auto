@@ -367,9 +367,9 @@ function showOutput(id, name) {
         <div class="card-body my-2">
         <table class="table my-0">
             <tbody>
-            <tr><td>Start Time:</td><td class="text-right">2020-09-22 17:40:03</td></tr>
-<tr><td>Duration:</td><td class="text-right">0:00:16.219809</td></tr>
-<tr><td>Status:</td><td class="text-right">Passed:31 Failed:3</td></tr>
+            <tr><td>Start Time:</td><td class="text-right">2020-09-23 09:39:31</td></tr>
+<tr><td>Duration:</td><td class="text-right">0:00:25.183569</td></tr>
+<tr><td>Status:</td><td class="text-right">Passed:34</td></tr>
 
             <tr><td>Description:</td><td class="text-right">自动化测试报告：吴迪</td></tr>
             </tbody>
@@ -380,9 +380,9 @@ function showOutput(id, name) {
 
 <div style="float:left; margin-left: 10px; margin-top: 20px;">
     <p> Test Case Pie charts </p>
-    <h2 class="d-flex align-items-center mb-0 font-weight-light pass-color">31</h2>
+    <h2 class="d-flex align-items-center mb-0 font-weight-light pass-color">34</h2>
     <a>PASSED</a><br>
-    <h2 class="d-flex align-items-center mb-0 font-weight-light fail-color">3</h2>
+    <h2 class="d-flex align-items-center mb-0 font-weight-light fail-color">0</h2>
     <a>FAILED</a>
     <h2 class="d-flex align-items-center mb-0 font-weight-light error-color">0</h2>
     <a>ERRORS</a><br>
@@ -667,13 +667,13 @@ pt1.1.10: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages
     <td></td>
 </tr>
 
-<tr class='failClass'>
+<tr class='passClass'>
     <td>test_case.test_02_customer.TestHttpRequest</td>
-    <td>5</td>
-    <td>2</td>
-    <td>3</td>
+    <td>8</td>
+    <td>8</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1.2',5)">Detail</a></td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.2',8)">Detail</a></td>
     <td>&nbsp;</td>
 </tr>
 
@@ -701,32 +701,21 @@ pt1.2.1: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr id='ft1.2.2' class='none'>
-    <td class='failCase'><div class='testcase'>test_customer_2</div></td>
+<tr id='pt1.2.2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_customer_2</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2.2')" >
-        fail</a>
-    <div id='div_ft1.2.2' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.2')" >
+        pass</a>
+    <div id='div_pt1.2.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.2.2: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+pt1.2.2: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-Traceback (most recent call last):
-  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\ddt.py", line 182, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\RTS_Auto\test_case\test_02_customer.py", line 43, in test_customer
-    raise e
-  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
-    self.assertEqual(item['msg'], res['msg'])
-AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
-- 操作成功
-+ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
-
 
 
         </pre>
@@ -736,32 +725,21 @@ AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 
     <td></td>
 </tr>
 
-<tr id='ft1.2.3' class='none'>
-    <td class='failCase'><div class='testcase'>test_customer_3</div></td>
+<tr id='pt1.2.3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_customer_3</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2.3')" >
-        fail</a>
-    <div id='div_ft1.2.3' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.3')" >
+        pass</a>
+    <div id='div_pt1.2.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.2.3: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+pt1.2.3: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-Traceback (most recent call last):
-  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\ddt.py", line 182, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\RTS_Auto\test_case\test_02_customer.py", line 43, in test_customer
-    raise e
-  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
-    self.assertEqual(item['msg'], res['msg'])
-AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
-- 操作成功
-+ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
-
 
 
         </pre>
@@ -771,32 +749,21 @@ AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 
     <td></td>
 </tr>
 
-<tr id='ft1.2.4' class='none'>
-    <td class='failCase'><div class='testcase'>test_customer_4</div></td>
+<tr id='pt1.2.4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_customer_4</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2.4')" >
-        fail</a>
-    <div id='div_ft1.2.4' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.4')" >
+        pass</a>
+    <div id='div_pt1.2.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.2.4: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+pt1.2.4: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
-Traceback (most recent call last):
-  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\ddt.py", line 182, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\RTS_Auto\test_case\test_02_customer.py", line 43, in test_customer
-    raise e
-  File "D:\RTS_Auto\test_case\test_02_customer.py", line 28, in test_customer
-    self.assertEqual(item['msg'], res['msg'])
-AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 chars]ow}"'
-- 操作成功
-+ JSON parse error: For input string: "${time_now}"; nested exception is com.alibaba.fastjson.JSONException: For input string: "${time_now}"
-
 
 
         </pre>
@@ -820,6 +787,78 @@ AssertionError: '操作成功' != 'JSON parse error: For input string: "${ti[93 
         <pre>
         
 pt1.2.5: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_customer_6</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.6')" >
+        pass</a>
+    <div id='div_pt1.2.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2.6: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_customer_7</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.7')" >
+        pass</a>
+    <div id='div_pt1.2.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2.7: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_customer_8</div></td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.8')" >
+        pass</a>
+    <div id='div_pt1.2.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2.8: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(
 
 
@@ -1234,93 +1273,11 @@ pt1.4.6: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\
     <td></td>
 </tr>
 
-<tr class='passClass'>
-    <td>test_case.test_06_membercard.TestHttpRequest</td>
-    <td>3</td>
-    <td>3</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c1.5',3)">Detail</a></td>
-    <td>&nbsp;</td>
-</tr>
-
-<tr id='pt1.5.1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_member_card_1</div></td>
-    <td colspan='5' align='center'>
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5.1')" >
-        pass</a>
-    <div id='div_pt1.5.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt1.5.1: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-    </td>
-    <td></td>
-</tr>
-
-<tr id='pt1.5.2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_member_card_2</div></td>
-    <td colspan='5' align='center'>
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5.2')" >
-        pass</a>
-    <div id='div_pt1.5.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt1.5.2: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-    </td>
-    <td></td>
-</tr>
-
-<tr id='pt1.5.3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_member_card_3</div></td>
-    <td colspan='5' align='center'>
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5.3')" >
-        pass</a>
-    <div id='div_pt1.5.3' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5.3').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt1.5.3: C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py:979: InsecureRequestWarning: Unverified HTTPS request is being made to host 'uatleague.round-table-union.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-    </td>
-    <td></td>
-</tr>
-
 <tr id='total_row'>
     <td>Total</td>
     <td>34</td>
-    <td class="text text-success">31</td>
-    <td class="text text-danger">3</td>
+    <td class="text text-success">34</td>
+    <td class="text text-danger">0</td>
     <td class="text text-warning">0</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1339,14 +1296,14 @@ var data = [
 		labelFontSize: '16'
 	},
 	{
-		value : 3,
+		value : 0,
 		color : "#fcc100",
 		label: "Fail",
 		labelColor: 'white',
 		labelFontSize: '16'
 	},
 	{
-		value : 31,
+		value : 34,
 		color : "#5fc27e",
 		label : "Pass",
 		labelColor: 'white',
