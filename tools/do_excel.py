@@ -1,9 +1,7 @@
-from openpyxl import load_workbook
+import openpyxl
 from tools.read_config import ReadConfig
 from tools.project_path import *
-# from tools.get_data import GetData
 from tools.common import StartBefore
-
 
 StartBefore().get_token()
 
@@ -14,7 +12,7 @@ class DoExcel(object):
         # user_tk = StartBefore().get_token()[0]
         customer_phone = StartBefore().new_customer_phone()
         url_uat = ReadConfig().get_config(test_config_path, 'URL', 'url')
-        wb = load_workbook(file_name)
+        wb = openpyxl.load_workbook(file_name)
         sheet = wb[sheet_name]
         # mode = eval(ReadConfig.get_config(test_config_path, 'MODE', 'mode'))
         test_data = []

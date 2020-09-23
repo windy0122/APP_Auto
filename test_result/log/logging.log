@@ -5404,3 +5404,1573 @@ Wed, 23 Sep 2020 11:53:44 test_01_receipt.py test_receipt [line:39] 获取的结
 Wed, 23 Sep 2020 11:53:45 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
 Wed, 23 Sep 2020 11:53:45 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
 Wed, 23 Sep 2020 11:53:46 test_01_receipt.py test_receipt [line:39] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:06:05 test_01_receipt.py test_receipt [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:06:06 test_01_receipt.py test_receipt [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:06:07 test_01_receipt.py test_receipt [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:06:07 test_01_receipt.py test_receipt [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:06:08 test_01_receipt.py test_receipt [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:06:08 test_01_receipt.py test_receipt [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:06:10 test_01_receipt.py test_receipt [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:06:11 test_01_receipt.py test_receipt [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:06:12 test_01_receipt.py test_receipt [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:06:13 test_01_receipt.py test_receipt [line:40] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:11:44 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:11:44 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:11:46 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:11:46 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:11:47 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:11:47 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:11:50 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:11:51 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:11:51 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:11:52 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:16:48 test_02_customer.py test_customer [line:50] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:16:49 test_02_customer.py test_customer [line:44] 执行出错： :: 操作成功 != 顾客已购买过此卡，请勿重复购买
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '顾客已购买过此卡，请勿重复购买'
+- 操作成功
++ 顾客已购买过此卡，请勿重复购买
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 31, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 顾客已购买过此卡，请勿重复购买
+Wed, 23 Sep 2020 14:16:49 test_02_customer.py test_customer [line:50] 获取的结果是：顾客已购买过此卡，请勿重复购买
+Wed, 23 Sep 2020 14:16:49 test_02_customer.py test_customer [line:44] 执行出错： :: 操作成功 != 顾客已购买过此卡，请勿重复购买
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '顾客已购买过此卡，请勿重复购买'
+- 操作成功
++ 顾客已购买过此卡，请勿重复购买
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 31, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 顾客已购买过此卡，请勿重复购买
+Wed, 23 Sep 2020 14:16:49 test_02_customer.py test_customer [line:50] 获取的结果是：顾客已购买过此卡，请勿重复购买
+Wed, 23 Sep 2020 14:16:49 test_02_customer.py test_customer [line:44] 执行出错： :: 操作成功 != 顾客已购买过此卡，请勿重复购买
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '顾客已购买过此卡，请勿重复购买'
+- 操作成功
++ 顾客已购买过此卡，请勿重复购买
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 31, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 顾客已购买过此卡，请勿重复购买
+Wed, 23 Sep 2020 14:16:49 test_02_customer.py test_customer [line:50] 获取的结果是：顾客已购买过此卡，请勿重复购买
+Wed, 23 Sep 2020 14:16:50 test_02_customer.py test_customer [line:50] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:16:50 test_02_customer.py test_customer [line:44] 执行出错： :: 操作成功 != 会员卡不可删除
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 31, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 会员卡不可删除
+Wed, 23 Sep 2020 14:16:50 test_02_customer.py test_customer [line:50] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 14:16:50 test_02_customer.py test_customer [line:44] 执行出错： :: 操作成功 != 会员卡不可删除
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 31, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 会员卡不可删除
+Wed, 23 Sep 2020 14:16:50 test_02_customer.py test_customer [line:50] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 14:16:50 test_02_customer.py test_customer [line:44] 执行出错： :: 操作成功 != 会员卡删除失败
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡删除失败'
+- 操作成功
++ 会员卡删除失败
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 31, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 会员卡删除失败
+Wed, 23 Sep 2020 14:16:50 test_02_customer.py test_customer [line:50] 获取的结果是：会员卡删除失败
+Wed, 23 Sep 2020 14:31:08 test_02_customer.py test_customer [line:50] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:31:08 test_02_customer.py test_customer [line:50] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:31:09 test_02_customer.py test_customer [line:50] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:31:10 test_02_customer.py test_customer [line:50] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:31:11 test_02_customer.py test_customer [line:50] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:17 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:17 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:20 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:20 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:21 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:22 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:23 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:25 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:25 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:26 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:26 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:27 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:27 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:29 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:29 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:32 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:32 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:33 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请填写姓名
+Wed, 23 Sep 2020 14:33:33 test_03_emplyoee.py test_employee [line:46] 获取的结果是：手机号不能为空
+Wed, 23 Sep 2020 14:33:34 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择员工头衔
+Wed, 23 Sep 2020 14:33:34 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择权限
+Wed, 23 Sep 2020 14:33:34 test_03_emplyoee.py test_employee [line:46] 获取的结果是：金额错误
+Wed, 23 Sep 2020 14:33:34 test_03_emplyoee.py test_employee [line:46] 获取的结果是：该手机号已被注册
+Wed, 23 Sep 2020 14:33:34 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 14:33:35 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 14:33:35 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:36 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:37 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:37 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:37 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:37 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:38 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:38 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 14:33:39 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:01 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:03 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:04 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:04 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:05 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:07 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:07 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:08 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:08 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:09 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:56 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:57 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:57 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:58 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:59 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:05:59 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:06:00 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '计次卡次数不足'
+- 操作成功
++ 计次卡次数不足
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '计次卡次数不足'
+- 操作成功
++ 计次卡次数不足
+
+Wed, 23 Sep 2020 16:06:00 test_01_receipt.py test_receipt [line:42] 获取的结果是：计次卡次数不足
+Wed, 23 Sep 2020 16:06:00 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:06:02 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:06:03 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:06:03 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:06:04 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '顾客不存在'
+- 操作成功
++ 顾客不存在
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '顾客不存在'
+- 操作成功
++ 顾客不存在
+
+Wed, 23 Sep 2020 16:06:04 test_02_customer.py test_customer [line:51] 获取的结果是：顾客不存在
+Wed, 23 Sep 2020 16:06:05 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '顾客不存在'
+- 操作成功
++ 顾客不存在
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '顾客不存在'
+- 操作成功
++ 顾客不存在
+
+Wed, 23 Sep 2020 16:06:05 test_02_customer.py test_customer [line:51] 获取的结果是：顾客不存在
+Wed, 23 Sep 2020 16:06:05 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '顾客不存在'
+- 操作成功
++ 顾客不存在
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '顾客不存在'
+- 操作成功
++ 顾客不存在
+
+Wed, 23 Sep 2020 16:06:05 test_02_customer.py test_customer [line:51] 获取的结果是：顾客不存在
+Wed, 23 Sep 2020 16:06:05 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:06:06 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:06:06 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:06:07 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请填写姓名
+Wed, 23 Sep 2020 16:06:08 test_03_emplyoee.py test_employee [line:46] 获取的结果是：手机号不能为空
+Wed, 23 Sep 2020 16:06:08 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择员工头衔
+Wed, 23 Sep 2020 16:06:08 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择权限
+Wed, 23 Sep 2020 16:06:08 test_03_emplyoee.py test_employee [line:46] 获取的结果是：金额错误
+Wed, 23 Sep 2020 16:06:08 test_03_emplyoee.py test_employee [line:46] 获取的结果是：该手机号已被注册
+Wed, 23 Sep 2020 16:06:09 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 16:06:09 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 16:06:09 test_04_emplyoee_update.py test_employee_update [line:37] 执行出错：'操作成功' != '操作异常'
+- 操作成功
++ 操作异常
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_04_emplyoee_update.py", line 31, in test_employee_update
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '操作异常'
+- 操作成功
++ 操作异常
+
+Wed, 23 Sep 2020 16:06:09 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作异常
+Wed, 23 Sep 2020 16:06:10 test_04_emplyoee_update.py test_employee_update [line:37] 执行出错：'操作成功' != '操作异常'
+- 操作成功
++ 操作异常
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_04_emplyoee_update.py", line 31, in test_employee_update
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '操作异常'
+- 操作成功
++ 操作异常
+
+Wed, 23 Sep 2020 16:06:10 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作异常
+Wed, 23 Sep 2020 16:06:10 test_04_emplyoee_update.py test_employee_update [line:37] 执行出错：'操作成功' != '操作异常'
+- 操作成功
++ 操作异常
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_04_emplyoee_update.py", line 31, in test_employee_update
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '操作异常'
+- 操作成功
++ 操作异常
+
+Wed, 23 Sep 2020 16:06:10 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作异常
+Wed, 23 Sep 2020 16:06:10 test_04_emplyoee_update.py test_employee_update [line:37] 执行出错：'操作成功' != '操作异常'
+- 操作成功
++ 操作异常
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_04_emplyoee_update.py", line 31, in test_employee_update
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '操作异常'
+- 操作成功
++ 操作异常
+
+Wed, 23 Sep 2020 16:06:10 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作异常
+Wed, 23 Sep 2020 16:06:11 test_04_emplyoee_update.py test_employee_update [line:37] 执行出错：'操作成功' != '操作异常'
+- 操作成功
++ 操作异常
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_04_emplyoee_update.py", line 31, in test_employee_update
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '操作异常'
+- 操作成功
++ 操作异常
+
+Wed, 23 Sep 2020 16:06:11 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作异常
+Wed, 23 Sep 2020 16:06:11 test_04_emplyoee_update.py test_employee_update [line:37] 执行出错：'操作成功' != '职员非本门店'
+- 操作成功
++ 职员非本门店
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_04_emplyoee_update.py", line 31, in test_employee_update
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '职员非本门店'
+- 操作成功
++ 职员非本门店
+
+Wed, 23 Sep 2020 16:06:11 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：职员非本门店
+Wed, 23 Sep 2020 16:06:11 test_06_membercard.py test_member_card [line:37] 执行出错：'操作成功' != '会员卡不存在'
+- 操作成功
++ 会员卡不存在
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不存在'
+- 操作成功
++ 会员卡不存在
+
+Wed, 23 Sep 2020 16:06:11 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡不存在
+Wed, 23 Sep 2020 16:06:11 test_06_membercard.py test_member_card [line:37] 执行出错：'操作成功' != '会员卡不存在'
+- 操作成功
++ 会员卡不存在
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不存在'
+- 操作成功
++ 会员卡不存在
+
+Wed, 23 Sep 2020 16:06:11 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡不存在
+Wed, 23 Sep 2020 16:06:12 test_06_membercard.py test_member_card [line:37] 执行出错：'操作成功' != '会员卡不存在'
+- 操作成功
++ 会员卡不存在
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不存在'
+- 操作成功
++ 会员卡不存在
+
+Wed, 23 Sep 2020 16:06:12 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡不存在
+Wed, 23 Sep 2020 16:12:12 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:12:13 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:12:13 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:12:14 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请填写姓名
+Wed, 23 Sep 2020 16:12:14 test_03_emplyoee.py test_employee [line:46] 获取的结果是：手机号不能为空
+Wed, 23 Sep 2020 16:12:14 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择员工头衔
+Wed, 23 Sep 2020 16:12:14 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择权限
+Wed, 23 Sep 2020 16:12:14 test_03_emplyoee.py test_employee [line:46] 获取的结果是：金额错误
+Wed, 23 Sep 2020 16:12:15 test_03_emplyoee.py test_employee [line:46] 获取的结果是：该手机号已被注册
+Wed, 23 Sep 2020 16:12:15 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 16:12:15 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 16:12:32 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:12:33 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:12:34 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:12:34 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:12:35 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:12:35 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:12:35 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:13:42 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:13:44 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:13:44 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:13:45 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:13:46 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:13:47 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:14:21 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:14:22 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:14:23 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:14:23 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:14:34 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:14:40 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+
+Wed, 23 Sep 2020 16:14:40 test_01_receipt.py test_receipt [line:42] 获取的结果是：该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Wed, 23 Sep 2020 16:14:40 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:40 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:40 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:40 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:41 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:42 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+
+Wed, 23 Sep 2020 16:14:42 test_02_customer.py test_customer [line:51] 获取的结果是：该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Wed, 23 Sep 2020 16:14:42 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:42 test_02_customer.py test_customer [line:51] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:42 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:42 test_02_customer.py test_customer [line:51] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:42 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:42 test_02_customer.py test_customer [line:51] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:42 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:42 test_02_customer.py test_customer [line:51] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:42 test_03_emplyoee.py test_employee [line:40] 执行出错：'操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_03_emplyoee.py", line 31, in test_employee
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+
+Wed, 23 Sep 2020 16:14:42 test_03_emplyoee.py test_employee [line:46] 获取的结果是：该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Wed, 23 Sep 2020 16:14:42 test_03_emplyoee.py test_employee [line:40] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_03_emplyoee.py", line 31, in test_employee
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:42 test_03_emplyoee.py test_employee [line:46] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:43 test_03_emplyoee.py test_employee [line:40] 执行出错：'请填写姓名' != '账号异常，请重新登录'
+- 请填写姓名
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_03_emplyoee.py", line 31, in test_employee
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '请填写姓名' != '账号异常，请重新登录'
+- 请填写姓名
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:43 test_03_emplyoee.py test_employee [line:46] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:43 test_03_emplyoee.py test_employee [line:40] 执行出错：'手机号不能为空' != '账号异常，请重新登录'
+- 手机号不能为空
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_03_emplyoee.py", line 31, in test_employee
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '手机号不能为空' != '账号异常，请重新登录'
+- 手机号不能为空
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:43 test_03_emplyoee.py test_employee [line:46] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:43 test_03_emplyoee.py test_employee [line:40] 执行出错：'请选择员工头衔' != '账号异常，请重新登录'
+- 请选择员工头衔
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_03_emplyoee.py", line 31, in test_employee
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '请选择员工头衔' != '账号异常，请重新登录'
+- 请选择员工头衔
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:43 test_03_emplyoee.py test_employee [line:46] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:43 test_03_emplyoee.py test_employee [line:40] 执行出错：'请选择权限' != '账号异常，请重新登录'
+- 请选择权限
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_03_emplyoee.py", line 31, in test_employee
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '请选择权限' != '账号异常，请重新登录'
+- 请选择权限
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:43 test_03_emplyoee.py test_employee [line:46] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:44 test_03_emplyoee.py test_employee [line:40] 执行出错：'金额错误' != '账号异常，请重新登录'
+- 金额错误
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_03_emplyoee.py", line 31, in test_employee
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '金额错误' != '账号异常，请重新登录'
+- 金额错误
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:44 test_03_emplyoee.py test_employee [line:46] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:44 test_03_emplyoee.py test_employee [line:40] 执行出错：'该手机号已被注册' != '账号异常，请重新登录'
+- 该手机号已被注册
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_03_emplyoee.py", line 31, in test_employee
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '该手机号已被注册' != '账号异常，请重新登录'
+- 该手机号已被注册
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:44 test_03_emplyoee.py test_employee [line:46] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:14:44 test_03_emplyoee.py test_employee [line:40] 执行出错：'错误的手机号，请确认手机号信息' != '账号异常，请重新登录'
+- 错误的手机号，请确认手机号信息
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_03_emplyoee.py", line 31, in test_employee
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '错误的手机号，请确认手机号信息' != '账号异常，请重新登录'
+- 错误的手机号，请确认手机号信息
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:14:44 test_03_emplyoee.py test_employee [line:46] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:02 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:15:09 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+
+Wed, 23 Sep 2020 16:15:09 test_01_receipt.py test_receipt [line:42] 获取的结果是：该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:10 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:11 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:11 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:11 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:11 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:11 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:11 test_01_receipt.py test_receipt [line:42] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:11 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+
+Wed, 23 Sep 2020 16:15:11 test_02_customer.py test_customer [line:51] 获取的结果是：该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Wed, 23 Sep 2020 16:15:11 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:11 test_02_customer.py test_customer [line:51] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:11 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:11 test_02_customer.py test_customer [line:51] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:11 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:11 test_02_customer.py test_customer [line:51] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:12 test_02_customer.py test_customer [line:45] 执行出错：'操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '账号异常，请重新登录'
+- 操作成功
++ 账号异常，请重新登录
+
+Wed, 23 Sep 2020 16:15:12 test_02_customer.py test_customer [line:51] 获取的结果是：账号异常，请重新登录
+Wed, 23 Sep 2020 16:15:12 test_03_emplyoee.py test_employee [line:40] 执行出错：'操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_03_emplyoee.py", line 31, in test_employee
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！'
+- 操作成功
++ 该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+
+Wed, 23 Sep 2020 16:15:12 test_03_emplyoee.py test_employee [line:46] 获取的结果是：该账号在其他设备进行了登录，如果不是本人登录请及时修改密码！
+Wed, 23 Sep 2020 16:20:28 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:20:31 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:31 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:32 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:32 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:33 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:35 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:35 test_01_receipt.py test_receipt [line:36] 执行出错：'操作成功' != '计次卡次数不足'
+- 操作成功
++ 计次卡次数不足
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_01_receipt.py", line 30, in test_receipt
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '计次卡次数不足'
+- 操作成功
++ 计次卡次数不足
+
+Wed, 23 Sep 2020 16:20:35 test_01_receipt.py test_receipt [line:42] 获取的结果是：计次卡次数不足
+Wed, 23 Sep 2020 16:20:36 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:36 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:36 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:37 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:37 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:38 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:39 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:39 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:39 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:40 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:42 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请填写姓名
+Wed, 23 Sep 2020 16:20:42 test_03_emplyoee.py test_employee [line:46] 获取的结果是：手机号不能为空
+Wed, 23 Sep 2020 16:20:42 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择员工头衔
+Wed, 23 Sep 2020 16:20:42 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择权限
+Wed, 23 Sep 2020 16:20:42 test_03_emplyoee.py test_employee [line:46] 获取的结果是：金额错误
+Wed, 23 Sep 2020 16:20:42 test_03_emplyoee.py test_employee [line:46] 获取的结果是：该手机号已被注册
+Wed, 23 Sep 2020 16:20:43 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 16:20:43 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 16:20:43 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:44 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:44 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:44 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:45 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:45 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:20:45 test_06_membercard.py test_member_card [line:37] 执行出错：'操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+Wed, 23 Sep 2020 16:20:45 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 16:20:45 test_06_membercard.py test_member_card [line:37] 执行出错：'操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+Wed, 23 Sep 2020 16:20:45 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 16:20:45 test_06_membercard.py test_member_card [line:37] 执行出错：'操作成功' != '会员卡删除失败'
+- 操作成功
++ 会员卡删除失败
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡删除失败'
+- 操作成功
++ 会员卡删除失败
+
+Wed, 23 Sep 2020 16:20:45 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡删除失败
+Wed, 23 Sep 2020 16:25:32 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:25:33 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:25:34 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:25:34 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:43 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:26:47 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:48 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:48 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:49 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:50 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:51 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:52 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:52 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:53 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:55 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:56 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:56 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:57 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:58 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:58 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:58 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:59 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:26:59 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请填写姓名
+Wed, 23 Sep 2020 16:26:59 test_03_emplyoee.py test_employee [line:46] 获取的结果是：手机号不能为空
+Wed, 23 Sep 2020 16:26:59 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择员工头衔
+Wed, 23 Sep 2020 16:27:00 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择权限
+Wed, 23 Sep 2020 16:27:00 test_03_emplyoee.py test_employee [line:46] 获取的结果是：金额错误
+Wed, 23 Sep 2020 16:27:00 test_03_emplyoee.py test_employee [line:46] 获取的结果是：该手机号已被注册
+Wed, 23 Sep 2020 16:27:00 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 16:27:00 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 16:27:00 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:27:02 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:27:02 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:27:03 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:27:03 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:27:03 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:27:03 test_06_membercard.py test_member_card [line:37] 执行出错：'操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+Wed, 23 Sep 2020 16:27:03 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 16:27:04 test_06_membercard.py test_member_card [line:37] 执行出错：'操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+Wed, 23 Sep 2020 16:27:04 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 16:27:04 test_06_membercard.py test_member_card [line:37] 执行出错：'操作成功' != '会员卡删除失败'
+- 操作成功
++ 会员卡删除失败
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡删除失败'
+- 操作成功
++ 会员卡删除失败
+
+Wed, 23 Sep 2020 16:27:04 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡删除失败
+Wed, 23 Sep 2020 16:27:24 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:27:25 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:27:26 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:27:27 test_06_membercard.py test_member_card [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:27:30 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:27:31 test_06_membercard.py test_member_card [line:37] 执行出错： :: 操作成功 != 会员卡不可删除
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 会员卡不可删除
+Wed, 23 Sep 2020 16:27:31 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 16:27:31 test_06_membercard.py test_member_card [line:37] 执行出错： :: 操作成功 != 会员卡不可删除
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 会员卡不可删除
+Wed, 23 Sep 2020 16:27:31 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 16:27:32 test_06_membercard.py test_member_card [line:37] 执行出错： :: 操作成功 != 会员卡删除失败
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡删除失败'
+- 操作成功
++ 会员卡删除失败
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_06_membercard.py", line 31, in test_member_card
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 会员卡删除失败
+Wed, 23 Sep 2020 16:27:32 test_06_membercard.py test_member_card [line:43] 获取的结果是：会员卡删除失败
+Wed, 23 Sep 2020 16:28:49 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:28:50 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:28:51 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:28:52 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:28:52 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:28:52 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:28:53 test_02_customer.py test_customer [line:45] 执行出错： :: 操作成功 != 会员卡不可删除
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 会员卡不可删除
+Wed, 23 Sep 2020 16:28:53 test_02_customer.py test_customer [line:51] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 16:28:53 test_02_customer.py test_customer [line:45] 执行出错： :: 操作成功 != 会员卡不可删除
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡不可删除'
+- 操作成功
++ 会员卡不可删除
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 会员卡不可删除
+Wed, 23 Sep 2020 16:28:53 test_02_customer.py test_customer [line:51] 获取的结果是：会员卡不可删除
+Wed, 23 Sep 2020 16:28:53 test_02_customer.py test_customer [line:45] 执行出错： :: 操作成功 != 会员卡删除失败
+Traceback (most recent call last):
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\wudi\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: '操作成功' != '会员卡删除失败'
+- 操作成功
++ 会员卡删除失败
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RTS_Auto\test_case\test_02_customer.py", line 32, in test_customer
+    self.assertEqual(item['msg'], res['msg'])
+  File "E:\Program Files\JetBrains\PyCharm Community Edition 2018.2.2\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: 操作成功 != 会员卡删除失败
+Wed, 23 Sep 2020 16:28:53 test_02_customer.py test_customer [line:51] 获取的结果是：会员卡删除失败
+Wed, 23 Sep 2020 16:29:05 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:29:06 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:07 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:08 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:09 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:09 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:09 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:09 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:10 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:15 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:29:17 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:17 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:17 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:18 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:18 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:18 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:19 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:20 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:24 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:29:25 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:26 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:27 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:28 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:28 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:28 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:29 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:29 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:48 test_is_exists.py test_is_exists [line:32] 文件已存在
+Wed, 23 Sep 2020 16:29:50 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:51 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:51 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:53 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:54 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:54 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:55 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:57 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:58 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:58 test_01_receipt.py test_receipt [line:42] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:58 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:29:59 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:00 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:00 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:01 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:01 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:01 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:02 test_02_customer.py test_customer [line:51] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:03 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:03 test_03_emplyoee.py test_employee [line:46] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:04 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请填写姓名
+Wed, 23 Sep 2020 16:30:05 test_03_emplyoee.py test_employee [line:46] 获取的结果是：手机号不能为空
+Wed, 23 Sep 2020 16:30:05 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择员工头衔
+Wed, 23 Sep 2020 16:30:06 test_03_emplyoee.py test_employee [line:46] 获取的结果是：请选择权限
+Wed, 23 Sep 2020 16:30:06 test_03_emplyoee.py test_employee [line:46] 获取的结果是：金额错误
+Wed, 23 Sep 2020 16:30:06 test_03_emplyoee.py test_employee [line:46] 获取的结果是：该手机号已被注册
+Wed, 23 Sep 2020 16:30:07 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 16:30:08 test_03_emplyoee.py test_employee [line:46] 获取的结果是：错误的手机号，请确认手机号信息
+Wed, 23 Sep 2020 16:30:08 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:10 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:10 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:10 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:11 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功
+Wed, 23 Sep 2020 16:30:11 test_04_emplyoee_update.py test_employee_update [line:43] 获取的结果是：操作成功

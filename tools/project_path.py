@@ -1,6 +1,8 @@
 # 专门读取路径的值
 
 import os
+import logging
+import openpyxl
 
 # project_path = os.path.realpath(__file__)  # D:\Api_Auto\tools\project_path.py
 project_path = os.path.split(os.path.split(os.path.realpath(__file__))[0])[0]    # D:\Api_Auto
@@ -22,7 +24,7 @@ test_log_path = os.path.join(project_path, 'test_result', 'log', 'logging.log')
 
 
 if __name__ == '__main__':
-    print(test_data_path)
+    print(test_tmp_path)
 
 
 

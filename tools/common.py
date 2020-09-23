@@ -2,15 +2,16 @@ import random
 import logging
 import requests
 import json
-from openpyxl import load_workbook
+import openpyxl
 import time
-
 from tools.project_path import *
+from tools.test_is_exists import TestIsExists
 
 
 class StartBefore(object):
     shop_tk = None
     shop_id = None
+    TestIsExists().test_is_exists()
     # shop_customer = None
 
     # 登录获取店铺tk和shop_id
@@ -36,7 +37,6 @@ class StartBefore(object):
                         "applicationId": "AjwG1Pb2_9CZbEZ3QnWIc1f7HRbPBXo6-ismtWk5Y27H"
                     }
 
-        # urllib3.disable_warnings()
         try:
             r = requests.post(url, headers=header, data=json.dumps(payload), verify=False)
             res = r.json()
@@ -94,15 +94,17 @@ class StartBefore(object):
     # 获取init表中数据(1、顾客id   2、储值卡id   3、计次卡id    4、年卡id    5、员工id    6、店铺tk)
     @staticmethod
     def get_data_init(num):
-        wb = load_workbook(test_tmp_path)
+        wb = openpyxl.load_workbook(test_tmp_path)
         sheet = wb['init']
         init_data = sheet.cell(2, num).value
+        if init_data is None:
+            init_data = '1'
         return init_data
 
     # 写入result(返回数据)，写入TestResult(pass or failed)
     @staticmethod
     def write_back(file_name, sheet_name, case_id, i, result, TestResult, current_path):
-        wb = load_workbook(file_name)
+        wb = openpyxl.load_workbook(file_name)
         sheet = wb[sheet_name]
         sheet.cell(i, 1).value = case_id
         sheet.cell(i, 2).value = result
@@ -113,7 +115,7 @@ class StartBefore(object):
     # 写入数据到init表中
     @staticmethod
     def write_back_init(file_name, sheet_name, i, result):
-        wb = load_workbook(file_name)
+        wb = openpyxl.load_workbook(file_name)
         sheet = wb[sheet_name]
         sheet.cell(2, i).value = result
         wb.save(file_name)
@@ -146,7 +148,7 @@ class StartBefore(object):
 if __name__ == '__main__':
     start = StartBefore()
     print(start.get_token())
-    print(start.get_phone_num())
+    # print(start.test_is_exists())
     # print(start.new_customer_phone())
     # print(start.get_data_init(6))
     # print(start.get_time_now())
