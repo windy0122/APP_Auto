@@ -41,6 +41,8 @@ class TestHttpRequest(unittest.TestCase):
             StartBefore.write_back(test_tmp_path, 'test_result', int(item['case_id']),
                                    int(item['case_id']) + 1, str(res), test_tesult, current_path)
             logging.info('获取的结果是：{0}'.format(res['msg']))
+            logging.info('request:{0}'.format(item))
+            logging.info('response:{0}'.format(res))
 
 
 

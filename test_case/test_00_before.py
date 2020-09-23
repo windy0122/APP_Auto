@@ -8,21 +8,16 @@ import logging
 from tools.common import StartBefore
 import os
 
-current_path = os.path.basename(__file__)
-
-test_data = DoExcel.get_data(test_data_path, 'employee_update')
+StartBefore().login()
 
 
 @ddt
 class TestHttpRequest(unittest.TestCase):
-    def setUp(self):
-        pass
+    test_data_receipt = DoExcel.get_data(test_data_path, 'start_before')
+    current_path = os.path.basename(__file__)
 
-    def tearDown(self):
-        pass
-
-    @data(*test_data)
-    def test_employee_update(self, item):
+    @data(*test_data_receipt)
+    def test_before(self, item):
         test_tesult = None
         r = HttpRequest.http_request(item['url'], eval(item['data']), item['http_method'], eval(item['header']))
         res = r.json()
@@ -32,6 +27,17 @@ class TestHttpRequest(unittest.TestCase):
             # print(res.json())
             test_tesult = 'PASS'
 
+            # 将tk写入init文件中
+            if 'tk' in res['val']:
+                StartBefore().write_back_init(test_tmp_path, 'init', 6, res['val']['tk'])
+
+            # 将新建的顾客写入到test文件的init表中
+            if 'id' in res['val']:
+                StartBefore().write_back_init(test_tmp_path, 'init', 1, res['val']['id'])
+
+            # 将新建的员工写入到test文件的init表中
+            StartBefore().write_employee_id(res)
+
         except AssertionError as e:
             test_tesult = 'FAILED'
             logging.exception('执行出错：{0}'.format(e))
@@ -39,10 +45,12 @@ class TestHttpRequest(unittest.TestCase):
             raise e
         finally:
             StartBefore.write_back(test_tmp_path, 'test_result', int(item['case_id']),
-                                   int(item['case_id']) + 1, str(res), test_tesult, current_path)
+                                   int(item['case_id']) + 1, str(res), test_tesult, self.current_path)
             logging.info('获取的结果是：{0}'.format(res['msg']))
             logging.info('request:{0}'.format(item))
             logging.info('response:{0}'.format(res))
+
+
 
 
 

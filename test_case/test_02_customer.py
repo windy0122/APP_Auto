@@ -8,19 +8,11 @@ import logging
 from tools.common import StartBefore
 import os
 
-current_path = os.path.basename(__file__)
-test_data_receipt = DoExcel.get_data(test_data_path, 'customer')
-
-
-
 
 @ddt
 class TestHttpRequest(unittest.TestCase):
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
+    current_path = os.path.basename(__file__)
+    test_data_receipt = DoExcel.get_data(test_data_path, 'customer')
 
     @data(*test_data_receipt)
     def test_customer(self, item):
@@ -33,10 +25,6 @@ class TestHttpRequest(unittest.TestCase):
             # print(res.json())
             test_tesult = 'PASS'
 
-            # 将新建的顾客写入到test文件的init表中
-            if 'id' in res['val']:
-                StartBefore().write_back_init(test_tmp_path, 'init', 1, res['val']['id'])
-
             # 通过顾客卡接口，将顾客卡id，写入到init表中
             StartBefore().write_customer_card_id(res)
 
@@ -47,8 +35,10 @@ class TestHttpRequest(unittest.TestCase):
             raise e
         finally:
             StartBefore.write_back(test_tmp_path, 'test_result', int(item['case_id']),
-                                   int(item['case_id']) + 1, str(res), test_tesult, current_path)
+                                   int(item['case_id']) + 1, str(res), test_tesult, self.current_path)
             logging.info('获取的结果是：{0}'.format(res['msg']))
+            logging.info('request:{0}'.format(item))
+            logging.info('response:{0}'.format(res))
 
 
 

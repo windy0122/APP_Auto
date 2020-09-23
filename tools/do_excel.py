@@ -3,14 +3,12 @@ from tools.read_config import ReadConfig
 from tools.project_path import *
 from tools.common import StartBefore
 
-StartBefore().get_token()
-
 
 class DoExcel(object):
     @staticmethod
     def get_data(file_name, sheet_name):
         # user_tk = StartBefore().get_token()[0]
-        customer_phone = StartBefore().new_customer_phone()
+        customer_phone = StartBefore().create_phone()
         url_uat = ReadConfig().get_config(test_config_path, 'URL', 'url')
         wb = openpyxl.load_workbook(file_name)
         sheet = wb[sheet_name]
@@ -66,6 +64,6 @@ class DoExcel(object):
 
 
 if __name__ == '__main__':
-    res = DoExcel.get_data(test_data_path, 'customer')
+    res = DoExcel.get_data(test_data_path, 'start_before')
     print(res)
 

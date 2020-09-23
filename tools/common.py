@@ -16,8 +16,7 @@ class StartBefore(object):
 
     # 登录获取店铺tk和shop_id
     # 将token写入init表中
-    # @staticmethod
-    def get_token(self):
+    def login(self):
         url = 'https://uatleague.round-table-union.com/api/rts/base/home/login/V141'
 
         header = {'content-type': 'application/json',
@@ -26,53 +25,48 @@ class StartBefore(object):
                   }
 
         payload = {
-                        "smsCodeToken": None,
-                        "standbyUniqueIdentification": "_Android10",
-                        "deviceUniqueIdentification": "",
-                        "password": "e10adc3949ba59abbe56e057f20f883e",
-                        "loginType": "1",
-                        "smsCode": None,
-                        "loginCode": "13411111111",
-                        "source": "",
-                        "applicationId": "AjwG1Pb2_9CZbEZ3QnWIc1f7HRbPBXo6-ismtWk5Y27H"
-                    }
+                "smsCodeToken": None,
+                "standbyUniqueIdentification": "_Android10",
+                "deviceUniqueIdentification": "",
+                "password": "e10adc3949ba59abbe56e057f20f883e",
+                "loginType": "1",
+                "smsCode": None,
+                "loginCode": "13411111111",
+                "source": "",
+                "applicationId": "AjwG1Pb2_9CZbEZ3QnWIc1f7HRbPBXo6-ismtWk5Y27H"
+            }
 
         try:
             r = requests.post(url, headers=header, data=json.dumps(payload), verify=False)
             res = r.json()
-            # print(res)
-            global shop_tk
-            global shop_id
             shop_tk = res['val']['tk']
-            shop_id = res['val']['shopId']
             self.write_back_init(test_tmp_path, 'init', 6, shop_tk)
-            return shop_tk, shop_id
         except Exception as e:
             logging.info('登录失败')
             raise e
-
-    # 查询店铺顾客手机号
-    # @staticmethod
-    def get_phone_num(self):
-
-        url = 'https://uatleague.round-table-union.com/api/rts/member/membership/searchMembership/V133?condition='
-
-        header = {'content-type': 'application/json',
-                  'version': '1.4.1',
-                  'platform': 'iOS',
-                  'tk': self.get_data_init(6)
-                  }
-
-        r = requests.get(url, headers=header, verify=False)
-        # print(r.json())
-        member_res = r.json()['val']['membershipList']
-        self.shop_customer = []
-        if len(member_res) > 0:
-            for i in range(len(member_res)):
-                self.shop_customer.append(member_res[i]['membershipMobile'])
-
-        # 返回顾客号码列表
-        return self.shop_customer
+    #
+    # # 查询店铺顾客手机号
+    # # @staticmethod
+    # def get_phone_num(self):
+    #
+    #     url = 'https://uatleague.round-table-union.com/api/rts/member/membership/searchMembership/V133?condition='
+    #
+    #     header = {'content-type': 'application/json',
+    #               'version': '1.4.1',
+    #               'platform': 'iOS',
+    #               'tk': self.get_token()[0]
+    #               }
+    #
+    #     r = requests.get(url, headers=header, verify=False)
+    #     # print(r.json())
+    #     member_res = r.json()['val']['membershipList']
+    #     self.shop_customer = []
+    #     if len(member_res) > 0:
+    #         for i in range(len(member_res)):
+    #             self.shop_customer.append(member_res[i]['membershipMobile'])
+    #
+    #     # 返回顾客号码列表
+    #     return self.shop_customer
 
     # 随机生成顾客手机号
     @staticmethod
@@ -83,13 +77,13 @@ class StartBefore(object):
 
     # 验证顾客号码是否是店铺会员
     # @staticmethod
-    def new_customer_phone(self):
-        self.get_phone_num()
-        phone_num = self.create_phone()
-        if phone_num in self.shop_customer:
-            self.create_phone()
-        else:
-            return phone_num
+    # def new_customer_phone(self):
+    #     self.get_phone_num()
+    #     phone_num = self.create_phone()
+    #     if phone_num in self.shop_customer:
+    #         self.create_phone()
+    #     else:
+    #         return phone_num
 
     # 获取init表中数据(1、顾客id   2、储值卡id   3、计次卡id    4、年卡id    5、员工id    6、店铺tk)
     @staticmethod
@@ -147,7 +141,7 @@ class StartBefore(object):
 
 if __name__ == '__main__':
     start = StartBefore()
-    print(start.get_token())
+    print(start.create_phone())
     # print(start.test_is_exists())
     # print(start.new_customer_phone())
     # print(start.get_data_init(6))
