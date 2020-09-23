@@ -6,7 +6,7 @@ from test_case import test_01_receipt
 from test_case import test_02_customer
 from test_case import test_03_emplyoee
 from test_case import test_04_emplyoee_update
-from test_case import test_06_membercard
+from test_case import membercard
 
 # 根据类来执行用例
 # suite = unittest.TestSuite()

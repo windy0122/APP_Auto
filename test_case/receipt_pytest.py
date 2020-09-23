@@ -13,7 +13,7 @@ test_data_receipt = DoExcel.get_data(test_data_path, 'receipt')
 
 
 class TestHttpRequest(object):
-
+    @pytest.mark.demo
     @pytest.mark.parametrize('item', test_data_receipt)
     def test_receipt(self, item):
         TestResult = None
