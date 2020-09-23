@@ -1,4 +1,9 @@
 import logging
+<<<<<<< HEAD
+=======
+#import MySQLdb
+import redis
+>>>>>>> 440ff03b75585381a36df4862b156094081d3133
 import random
 import requests
 import json
