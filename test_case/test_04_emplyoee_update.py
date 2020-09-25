@@ -8,18 +8,14 @@ import logging
 from tools.common import StartBefore
 import os
 
-current_path = os.path.basename(__file__)
+StartBefore().before_test_employee_list()
 
-test_data = DoExcel.get_data(test_data_path, 'employee_update')
+current_path = os.path.basename(__file__)
 
 
 @ddt
 class TestHttpRequest(unittest.TestCase):
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
+    test_data = DoExcel.get_data(test_data_path, 'employee_update')
 
     @data(*test_data)
     def test_employee_update(self, item):

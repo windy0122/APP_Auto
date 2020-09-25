@@ -2,10 +2,12 @@ import random
 import logging
 import requests
 import json
-import openpyxl
 import time
 from tools.project_path import *
-from tools.test_is_exists import TestIsExists
+from tools.file_is_exists import TestIsExists
+from tools.read_config import ReadConfig
+
+url_conf = ReadConfig().get_config(test_config_path, 'URL', 'url')
 
 
 class StartBefore(object):
@@ -17,9 +19,9 @@ class StartBefore(object):
     # 登录获取店铺tk和shop_id
     # 将token写入init表中
     def login(self):
-        url = 'https://uatleague.round-table-union.com/api/rts/base/home/login/V141'
+        url = url_conf + '/api/rts/base/home/login/V141'
 
-        header = {'content-type': 'application/json',
+        header_login = {'content-type': 'application/json',
                   'version': '1.4.1',
                   'platform': 'iOS'
                   }
@@ -37,36 +39,13 @@ class StartBefore(object):
             }
 
         try:
-            r = requests.post(url, headers=header, data=json.dumps(payload), verify=False)
+            r = requests.post(url, headers=header_login, data=json.dumps(payload), verify=False)
             res = r.json()
             shop_tk = res['val']['tk']
             self.write_back_init(test_tmp_path, 'init', 6, shop_tk)
         except Exception as e:
             logging.info('登录失败')
             raise e
-    #
-    # # 查询店铺顾客手机号
-    # # @staticmethod
-    # def get_phone_num(self):
-    #
-    #     url = 'https://uatleague.round-table-union.com/api/rts/member/membership/searchMembership/V133?condition='
-    #
-    #     header = {'content-type': 'application/json',
-    #               'version': '1.4.1',
-    #               'platform': 'iOS',
-    #               'tk': self.get_token()[0]
-    #               }
-    #
-    #     r = requests.get(url, headers=header, verify=False)
-    #     # print(r.json())
-    #     member_res = r.json()['val']['membershipList']
-    #     self.shop_customer = []
-    #     if len(member_res) > 0:
-    #         for i in range(len(member_res)):
-    #             self.shop_customer.append(member_res[i]['membershipMobile'])
-    #
-    #     # 返回顾客号码列表
-    #     return self.shop_customer
 
     # 随机生成顾客手机号
     @staticmethod
@@ -75,17 +54,8 @@ class StartBefore(object):
         new_phone_num = random.choice(prelist) + ''.join(random.choice('0123456789') for i in range(9))
         return new_phone_num
 
-    # 验证顾客号码是否是店铺会员
-    # @staticmethod
-    # def new_customer_phone(self):
-    #     self.get_phone_num()
-    #     phone_num = self.create_phone()
-    #     if phone_num in self.shop_customer:
-    #         self.create_phone()
-    #     else:
-    #         return phone_num
-
-    # 获取init表中数据(1、顾客id   2、储值卡id   3、计次卡id    4、年卡id    5、员工id    6、店铺tk)
+    # 获取init表中数据(1、顾客id   2、储值卡id   3、计次卡id    4、年卡id    5、员工id    6、店铺tk
+    #                   7、储值卡模板id       8、计次卡模板id       9、年卡模板id)
     @staticmethod
     def get_data_init(num):
         wb = openpyxl.load_workbook(test_tmp_path)
@@ -116,7 +86,7 @@ class StartBefore(object):
 
     # 将顾客卡id写入到init表中
     def write_customer_card_id(self, res):
-        if isinstance(res['val'], list):
+        if isinstance(res['val'], list) and res['val'] != []:
             for i in range(len(res['val'])):
                 if res['val'][i]['cardType'] == '1':
                     self.write_back_init(test_tmp_path, 'init', 2, res['val'][i]['membershipCardId'])
@@ -138,10 +108,138 @@ class StartBefore(object):
         time_now = round(time.time()*1000)
         return str(time_now)
 
+    # 用例开始前接口
+    # 新建顾客
+    def before_test_new_customer(self):
+        url_new_customer = url_conf + '/api/rts/member/membership/addMembership/V125'
+
+        header = {'content-type': 'application/json',
+                  'version': '1.4.1',
+                  'platform': 'iOS',
+                  'tk': self.get_data_init(6)
+                  }
+
+        payload = {
+                 "membershipMobile": self.create_phone(),
+                 "gender": "0",
+                 "membershipName": "啦啦啦"
+                 }
+
+        r = requests.post(url_new_customer, headers=header, data=json.dumps(payload), verify=False)
+
+        res = r.json()
+        # print(res)
+
+        if 'id' in res['val']:
+            self.write_back_init(test_tmp_path, 'init', 1, res['val']['id'])
+
+    # 新建员工
+    def before_test_new_employee(self):
+        url_new_employee = url_conf + '/api/rts/base/employee/saveEmployee4Shop/V141'
+
+        header = {'content-type': 'application/json',
+                  'version': '1.4.1',
+                  'platform': 'iOS',
+                  'tk': self.get_data_init(6)
+                  }
+
+        payload = {
+                 "employeeId": "",
+                 "roleId": "2",
+                 "renewalCardYn": "1",
+                 "employeeNickName": "剑琅联盟",
+                 "createActivitiesStatus": "1",
+                 "scoreSettleStatus": "1",
+                 "basicSalary": "1000",
+                 "viewCellphoneNumberYn": "1",
+                 "employeeMobile": self.create_phone(),
+                 "positionId": "2",
+                 "workStatus": "0",
+                 "scanCouponStatus": "1",
+                 "consumeViewStatus": "1",
+                 "sellCardYn": "1"
+                }
+
+        r = requests.post(url_new_employee, headers=header, data=json.dumps(payload), verify=False)
+
+        res = r.json()
+        # print(res)
+
+        self.write_employee_id(res)
+
+    # 获取员工列表
+    def before_test_employee_list(self):
+        url_employee_list = url_conf + '/api/rts/base/employee/getEmployeeList'
+
+        header = {'content-type': 'application/json',
+                  'version': '1.4.1',
+                  'platform': 'iOS',
+                  'tk': self.get_data_init(6)
+                  }
+
+        r = requests.get(url_employee_list, headers=header, verify=False)
+
+        res = r.json()
+        print(res)
+
+        self.write_employee_id(res)
+
+    # 获取顾客卡列表
+    def before_test_customer_list(self):
+        url_customer_list = url_conf + '/api/rts/member/membershipCard/membershipCardList/V131'
+
+        header = {'content-type': 'application/json',
+                  'version': '1.4.1',
+                  'platform': 'iOS',
+                  'tk': self.get_data_init(6)
+                  }
+
+        payload = {
+            'id': self.get_data_init(1)
+        }
+
+        r = requests.get(url_customer_list, headers=header, params=payload, verify=False)
+
+        res = r.json()
+        # print(r.url)
+        # print(res)
+
+        self.write_customer_card_id(res)
+
+    # 获取卡模板列表
+    def get_card_template(self):
+        url_card_template = url_conf + '/api/rts/member/card/getCardTemplateList/V131'
+
+        header = {'content-type': 'application/json',
+                  'version': '1.4.1',
+                  'platform': 'iOS',
+                  'tk': self.get_data_init(6)
+                  }
+
+        payload = {
+                "size": 20,
+                "page": 1
+            }
+
+        r = requests.post(url_card_template, headers=header, data=json.dumps(payload), verify=False)
+
+        res = r.json()
+
+        # 写入卡列表中的卡模板id，
+        if isinstance(res['val'], list) and res['val'] != []:
+            for i in range(len(res['val'])):
+                if res['val'][i]['cardName'] == '储值卡测试':
+                    self.write_back_init(test_tmp_path, 'init', 7, res['val'][i]['id'])
+                elif res['val'][i]['cardName'] == '计次卡测试':
+                    self.write_back_init(test_tmp_path, 'init', 8, res['val'][i]['id'])
+                elif res['val'][i]['cardName'] == '年卡测试':
+                    self.write_back_init(test_tmp_path, 'init', 9, res['val'][i]['id'])
+
 
 if __name__ == '__main__':
     start = StartBefore()
-    print(start.create_phone())
+    start.login()
+    # print(start.get_card_template())
     # print(start.test_is_exists())
     # print(start.new_customer_phone())
     # print(start.get_data_init(6))

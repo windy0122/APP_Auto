@@ -8,18 +8,14 @@ import logging
 from tools.common import StartBefore
 import os
 
-current_path = os.path.basename(__file__)
+StartBefore().before_test_new_employee()
 
-test_data = DoExcel.get_data(test_data_path, 'employee')
+current_path = os.path.basename(__file__)
 
 
 @ddt
 class TestHttpRequest(unittest.TestCase):
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
+    test_data = DoExcel.get_data(test_data_path, 'employee')
 
     @data(*test_data)
     def test_employee(self, item):
@@ -31,9 +27,6 @@ class TestHttpRequest(unittest.TestCase):
             self.assertEqual(item['msg'], res['msg'])
             # print(res.json())
             test_tesult = 'PASS'
-
-            # 将新建的员工写入到test文件的init表中
-            StartBefore().write_employee_id(res)
 
         except AssertionError as e:
             test_tesult = 'FAILED'

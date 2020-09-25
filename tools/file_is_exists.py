@@ -1,5 +1,4 @@
-# import openpyxl
-# import logging
+import logging
 from tools.project_path import *
 
 
@@ -19,6 +18,9 @@ class TestIsExists(object):
             ws['D1'] = '新办年卡id'
             ws['E1'] = '新建员工id'
             ws['F1'] = '店铺tk'
+            ws['G1'] = '储值卡模板id'
+            ws['H1'] = '计次卡模板id'
+            ws['I1'] = '年卡模板id'
 
             ws_result = wb.create_sheet('test_result')
 

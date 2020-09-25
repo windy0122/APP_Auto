@@ -8,21 +8,17 @@ import logging
 from tools.common import StartBefore
 import os
 
-current_path = os.path.basename(__file__)
+StartBefore().before_test_new_customer()
 
-test_data = DoExcel.get_data(test_data_path, 'card_template')
+current_path = os.path.basename(__file__)
 
 
 @ddt
-class TestHttpRequest(unittest.TestCase):
-    def setUp(self):
-        pass
+class TestCustomer(unittest.TestCase):
+    test_data_receipt = DoExcel.get_data(test_data_path, 'customer')
 
-    def tearDown(self):
-        pass
-
-    @data(*test_data)
-    def test_card_template(self, item):
+    @data(*test_data_receipt)
+    def test_customer(self, item):
         test_tesult = None
         r = HttpRequest.http_request(item['url'], eval(item['data']), item['http_method'], eval(item['header']))
         res = r.json()
@@ -41,9 +37,15 @@ class TestHttpRequest(unittest.TestCase):
             StartBefore.write_back(test_tmp_path, 'test_result', int(item['case_id']),
                                    int(item['case_id']) + 1, str(res), test_tesult, current_path)
             logging.info('获取的结果是：{0}'.format(res['msg']))
+            # 通过顾客卡接口，将顾客卡id，写入到init表中
+            StartBefore().before_test_customer_list()
+
             logging.info('request:{0}'.format(item))
             logging.info('response:{0}'.format(res))
 
+
+if __name__ == '__main__':
+    TestCustomer()
 
 
 

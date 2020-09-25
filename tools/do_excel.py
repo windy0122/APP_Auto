@@ -3,12 +3,14 @@ from tools.read_config import ReadConfig
 from tools.project_path import *
 from tools.common import StartBefore
 
+StartBefore().login()
+
 
 class DoExcel(object):
     @staticmethod
     def get_data(file_name, sheet_name):
-        # user_tk = StartBefore().get_token()[0]
         customer_phone = StartBefore().create_phone()
+        StartBefore().before_test_customer_list()
         url_uat = ReadConfig().get_config(test_config_path, 'URL', 'url')
         wb = openpyxl.load_workbook(file_name)
         sheet = wb[sheet_name]
@@ -46,6 +48,12 @@ class DoExcel(object):
                 row_data['data'] = sheet.cell(i, 3).value.replace('${employeeId}', StartBefore().get_data_init(5))
             elif sheet.cell(i, 3).value.find('${time_now}') != -1:
                 row_data['data'] = sheet.cell(i, 3).value.replace('${time_now}', StartBefore().get_time_now())
+            elif sheet.cell(i, 3).value.find('${storeCardTemplateId}') != -1:
+                row_data['data'] = sheet.cell(i, 3).value.replace('${storeCardTemplateId}', StartBefore().get_data_init(7))
+            elif sheet.cell(i, 3).value.find('${timeCardTemplateId}') != -1:
+                row_data['data'] = sheet.cell(i, 3).value.replace('${timeCardTemplateId}', StartBefore().get_data_init(8))
+            elif sheet.cell(i, 3).value.find('${yearCardTemplateId}') != -1:
+                row_data['data'] = sheet.cell(i, 3).value.replace('${yearCardTemplateId}', StartBefore().get_data_init(9))
             else:
                 row_data['data'] = sheet.cell(i, 3).value
 
@@ -64,6 +72,6 @@ class DoExcel(object):
 
 
 if __name__ == '__main__':
-    res = DoExcel.get_data(test_data_path, 'start_before')
+    res = DoExcel.get_data(test_data_path, 'card_template')
     print(res)
 

@@ -9,10 +9,12 @@ from tools.common import StartBefore
 import os
 
 
+test_data_receipt = DoExcel.get_data(test_data_path, 'receipt')
+current_path = os.path.basename(__file__)
+
+
 @ddt
 class TestHttpRequest(unittest.TestCase):
-    test_data_receipt = DoExcel.get_data(test_data_path, 'receipt')
-    current_path = os.path.basename(__file__)
 
     @data(*test_data_receipt)
     def test_receipt(self, item):
@@ -32,7 +34,7 @@ class TestHttpRequest(unittest.TestCase):
             raise e
         finally:
             StartBefore.write_back(test_tmp_path, 'test_result', int(item['case_id']),
-                                   int(item['case_id']) + 1, str(res), test_tesult, self.current_path)
+                                   int(item['case_id']) + 1, str(res), test_tesult, current_path)
             logging.info('获取的结果是：{0}'.format(res['msg']))
             logging.info('request:{0}'.format(item))
             logging.info('response:{0}'.format(res))

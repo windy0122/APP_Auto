@@ -2,12 +2,12 @@
 import unittest
 from tools.project_path import *
 import HTMLTestRunner
-from test_case import test_00_before
+from test_case import before
 from test_case import test_01_receipt
-from test_case import test_02_customer
+from test_case import customer
 from test_case import test_03_emplyoee
 from test_case import test_04_emplyoee_update
-from test_case import test_06_membercard
+from test_case import test_02_customer
 
 # 根据类来执行用例
 # suite = unittest.TestSuite()
@@ -17,12 +17,12 @@ from test_case import test_06_membercard
 # 根据测试用例来执行
 suite = unittest.TestSuite()
 loder = unittest.TestLoader()
-suite.addTest(loder.loadTestsFromModule(test_00_before))
+# suite.addTest(loder.loadTestsFromModule(before))
 suite.addTest(loder.loadTestsFromModule(test_01_receipt))
+suite.addTest(loder.loadTestsFromModule(customer))
 suite.addTest(loder.loadTestsFromModule(test_02_customer))
 suite.addTest(loder.loadTestsFromModule(test_03_emplyoee))
 suite.addTest(loder.loadTestsFromModule(test_04_emplyoee_update))
-suite.addTest(loder.loadTestsFromModule(test_06_membercard))
 
 
 with open(test_report_path, 'wb') as file:
