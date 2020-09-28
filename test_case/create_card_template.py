@@ -8,14 +8,18 @@ import logging
 from tools.common import StartBefore
 import os
 
+
 current_path = os.path.basename(__file__)
+
+test_data_card_template = DoExcel.get_data(test_data_path, 'create_card_template')
+# print(test_data_card_template)
 
 
 @ddt
-class CreateCardTemplate(unittest.TestCase):
-    test_data = DoExcel.get_data(test_data_path, 'create_card_template')
+class TestCreateCardTemplate(unittest.TestCase):
+    # test_data_delete_card_template = DoExcel.get_data(test_data_path, 'card_template')
 
-    @data(*test_data)
+    @data(*test_data_card_template)
     def test_card_template(self, item):
         test_tesult = None
         r = HttpRequest.http_request(item['url'], eval(item['data']), item['http_method'], eval(item['header']))
@@ -41,8 +45,8 @@ class CreateCardTemplate(unittest.TestCase):
             logging.info('response:{0}'.format(res))
 
 
-
-
+if __name__ == '__main__':
+    TestCreateCardTemplate().get_card_data()
 
 
 

@@ -11,34 +11,32 @@ import pytest
 
 test_data_receipt = DoExcel.get_data(test_data_path, 'receipt')
 
+current_path = os.path.basename(__file__)
+
 
 class TestHttpRequest(object):
     @pytest.mark.parametrize('item', test_data_receipt)
     def test_receipt(self, item):
-        TestResult = None
-        res = HttpRequest.http_request(item['url'], eval(item['data']), item['http_method'], eval(item['header']))
-        # res_val = res.json()
+        test_tesult = None
+        r = HttpRequest.http_request(item['url'], eval(item['data']), item['http_method'], eval(item['header']))
+        res = r.json()
         # print(res_val)
         try:
-            assert item['msg'], res.json()['msg']
-            print(res.json())
-            TestResult = 'PASS'
-
-            # # 将新建的顾客写入到test文件的init表中
-            # if 'id' in res_val['val']:
-            #     StartBefore().write_back_init(test_data_path, 'init', 1, res.json()['val']['id'])
-            #
-            # # 通过顾客卡接口，将顾客卡id，写入到init表中
-            # StartBefore().write_customer_card_id(res_val)
+            assert item['msg'], res['msg']
+            # print(res.json())
+            test_tesult = 'PASS'
 
         except AssertionError as e:
-            TestResult = 'FAILED'
+            test_tesult = 'FAILED'
             logging.exception('执行出错：{0}'.format(e))
-            print(res.json())
+            # print(res.json())
             raise e
         finally:
-            StartBefore.write_back(test_data_path, item['sheet_name'], int(item['case_id']) + 1, str(res.json()), TestResult)
-            logging.info('获取的结果是：{0}'.format(res.json()['msg']))
+            StartBefore.write_back(test_tmp_path, 'test_result', int(item['case_id']),
+                                   int(item['case_id']) + 1, str(res), test_tesult, current_path)
+            logging.info('获取的结果是：{0}'.format(res['msg']))
+            logging.info('request:{0}'.format(item))
+            logging.info('response:{0}'.format(res))
 
 
 

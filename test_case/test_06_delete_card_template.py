@@ -3,24 +3,27 @@ import unittest
 from tools.http_request import HttpRequest
 import tools.api_logging
 from tools.project_path import *
-from test_case.create_card_template import CreateCardTemplate
 from tools.do_excel import DoExcel
 import logging
-from tools.common import StartBefore
+from tools.start_before import StartBeforeNew
 import os
+from tools.common import StartBefore
 
 
-# CreateCardTemplate()
+StartBeforeNew().create_card_template()
+
+# StartBeforeNew().get_card_template()
 
 current_path = os.path.basename(__file__)
 
 
 @ddt
-class TestHttpRequest(unittest.TestCase):
-    test_data = DoExcel.get_data(test_data_path, 'card_template')
+class TestDeleteCardTemplate(unittest.TestCase):
 
-    @data(*test_data)
-    def test_delete_card_template(self, item):
+    test_data_delete_card_template = DoExcel.get_data(test_data_path, 'card_template')
+
+    @data(*test_data_delete_card_template)
+    def test_card_template(self, item):
         test_tesult = None
         r = HttpRequest.http_request(item['url'], eval(item['data']), item['http_method'], eval(item['header']))
         res = r.json()
@@ -37,13 +40,14 @@ class TestHttpRequest(unittest.TestCase):
             raise e
         finally:
             StartBefore.write_back(test_tmp_path, 'test_result', int(item['case_id']),
-                                   int(item['case_id']) + 1, str(res), test_tesult, current_path)
+                                 int(item['case_id']) + 1, str(res), test_tesult, current_path)
             logging.info('获取的结果是：{0}'.format(res['msg']))
             logging.info('request:{0}'.format(item))
             logging.info('response:{0}'.format(res))
 
 
-
+if __name__ == '__main__':
+    unittest.main()
 
 
 

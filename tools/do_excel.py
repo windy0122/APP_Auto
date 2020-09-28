@@ -2,6 +2,7 @@ import openpyxl
 from tools.read_config import ReadConfig
 from tools.project_path import *
 from tools.common import StartBefore
+# from tools.start_before import StartBefore
 
 StartBefore().login()
 
@@ -10,7 +11,7 @@ class DoExcel(object):
     @staticmethod
     def get_data(file_name, sheet_name):
         customer_phone = StartBefore().create_phone()
-        StartBefore().before_test_customer_list()
+        # StartBefore().before_test_customer_list()
         url_uat = ReadConfig().get_config(test_config_path, 'URL', 'url')
         wb = openpyxl.load_workbook(file_name)
         sheet = wb[sheet_name]
@@ -72,6 +73,6 @@ class DoExcel(object):
 
 
 if __name__ == '__main__':
-    res = DoExcel.get_data(test_data_path, 'card_template')
+    res = DoExcel.get_data(test_data_path, 'create_card_template')
     print(res)
 
