@@ -21,7 +21,7 @@ class StartBeforeNew(object):
     # 用例开始前接口
     # 新建卡模板
     def create_card_template(self):
-        url_card_template = url_conf + '/api/rts/member/card/addCardTemplate/V141'
+        url_new_card_template = url_conf + '/api/rts/member/card/addCardTemplate/V141'
 
         payload = {
              "enjoyDiscount": "90",
@@ -51,9 +51,9 @@ class StartBeforeNew(object):
              "enjoyDiscount": "90"
             }
 
-        r = requests.post(url_card_template, headers=self.header, data=json.dumps(payload), verify=False)
-        r_time = requests.post(url_card_template, headers=self.header, data=json.dumps(payload_time), verify=False)
-        r_year = requests.post(url_card_template, headers=self.header, data=json.dumps(payload_year), verify=False)
+        r = requests.post(url_new_card_template, headers=self.header, data=json.dumps(payload), verify=False)
+        r_time = requests.post(url_new_card_template, headers=self.header, data=json.dumps(payload_time), verify=False)
+        r_year = requests.post(url_new_card_template, headers=self.header, data=json.dumps(payload_year), verify=False)
 
         res = r.json()
         # print(res)
@@ -113,7 +113,7 @@ class StartBeforeNew(object):
         r = requests.post(url_new_customer, headers=self.header, data=json.dumps(payload), verify=False)
 
         res = r.json()
-        print(res)
+        # print(res)
 
         if 'id' in res['val']:
             StartBefore().write_back_init(test_tmp_path, 'init', 1, res['val']['id'])
@@ -205,4 +205,12 @@ class StartBeforeNew(object):
 if __name__ == '__main__':
     start = StartBeforeNew()
     # start.before_test_new_customer()
-    start.new_customer_card()
+    # start.create_new_event()
+    # start.get_rose_new_template_detail()
+    # start.apply_success()
+
+
+
+
+
+

@@ -21,6 +21,10 @@ class TestIsExists(object):
             ws['G1'] = '储值卡模板id'
             ws['H1'] = '计次卡模板id'
             ws['I1'] = '年卡模板id'
+            ws['J1'] = 'PFM后台tk'
+            ws['K1'] = '玫瑰券活动id'
+            ws['L1'] = '新客券templateId'
+            ws['M1'] = 'apply_id'
 
             ws_result = wb.create_sheet('test_result')
 

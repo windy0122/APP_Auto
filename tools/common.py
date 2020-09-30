@@ -8,6 +8,7 @@ from tools.file_is_exists import TestIsExists
 from tools.read_config import ReadConfig
 
 url_conf = ReadConfig().get_config(test_config_path, 'URL', 'url')
+url_pfm = ReadConfig().get_config(test_config_path, 'URL', 'url_pfm_uat')
 
 
 class StartBefore(object):
@@ -19,6 +20,7 @@ class StartBefore(object):
     # 登录获取店铺tk和shop_id
     # 将token写入init表中
     def login(self):
+        global shop_id
         url = url_conf + '/api/rts/base/home/login/V141'
 
         header_login = {'content-type': 'application/json',
@@ -42,9 +44,36 @@ class StartBefore(object):
             r = requests.post(url, headers=header_login, data=json.dumps(payload), verify=False)
             res = r.json()
             shop_tk = res['val']['tk']
+            shop_id = res['val']['shopId']
             self.write_back_init(test_tmp_path, 'init', 6, shop_tk)
         except Exception as e:
             logging.info('登录失败')
+            raise e
+        finally:
+            return shop_id
+
+    # pfm登录
+    def login_pfm(self):
+        url_login_pfm = url_pfm + '/api2/pfm/auth/login'
+
+        header = {
+            'platform': 'Web',
+            'version': '1.5.0',
+            'Content-Type': 'application/json;charset=UTF-8'
+        }
+
+        payload = {
+            "cellPhoneNumber": "wudi",
+            "passwordSHA1": "7c4a8d09ca3762af61e59520943dc26494f8941b"
+        }
+
+        try:
+            r = requests.post(url_login_pfm, headers=header, data=json.dumps(payload), verify=False)
+            res = r.json()
+            pfm_tk = res['val']
+            self.write_back_init(test_tmp_path, 'init', 10, pfm_tk)
+        except Exception as e:
+            logging.error('登录失败')
             raise e
 
     # 随机生成顾客手机号
@@ -55,7 +84,8 @@ class StartBefore(object):
         return new_phone_num
 
     # 获取init表中数据(1、顾客id   2、储值卡id   3、计次卡id    4、年卡id    5、员工id    6、店铺tk
-    #                   7、储值卡模板id       8、计次卡模板id       9、年卡模板id)
+    #  7、储值卡模板id       8、计次卡模板id       9、年卡模板id    10、pfm后台tk      11、玫瑰券id    12、新客券模板id)
+    # 13、上下架apply_id
     @staticmethod
     def get_data_init(num):
         wb = openpyxl.load_workbook(test_tmp_path)
@@ -142,7 +172,7 @@ class StartBefore(object):
         r = requests.get(url_employee_list, headers=header, verify=False)
 
         res = r.json()
-        print(res)
+        # print(res)
 
         self.write_employee_id(res)
 
@@ -150,7 +180,7 @@ class StartBefore(object):
 if __name__ == '__main__':
     start = StartBefore()
     start.login()
-    # print(start.get_card_template())
+    start.login_pfm()
     # print(start.test_is_exists())
     # print(start.new_customer_phone())
     # print(start.get_data_init(6))

@@ -15,5 +15,5 @@ if __name__ == '__main__':
     config_info = ReadConfig()
     # print(config_info.get_config(test_config_path, 'URL', 'uat_url'))
     # config_info.get_config(test_config_path, 'MODE', 'mode')
-    print(config_info.get_config(test_config_path, 'MODE', 'mode'))
+    print(ReadConfig().get_config(test_config_path, 'URL', 'url'))
 
